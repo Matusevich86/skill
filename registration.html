@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillPlus.Me</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+     <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <link href="css/magicsuggest-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zero.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="SkillPlus.Me"/>
+    <meta property="og:description" content="Опыт - лучший учитель"/>
+    <meta property="og:image" content="http://skillplus.me/image/meta-enter.png"/>
+    <meta property="og:url" content="http://skillplus.me/"/>
+    <meta property="og:site_name" content="SkillPlus.Me"/>
+</head>
+<body>
+  <div class="header">
+      <div class="contW">      
+       <div class="logo">
+           <a href="index.html"><img class="logo-img" src="image/logo.png"></a> 
+       </div>
+       <div class='vyhod'>
+           <a href="#"><img src="image/vyhod.png" alt="Выход"><div>&nbsp;&nbsp;Выход</div></a>
+       </div>
+       <div class="search">
+           <input class="magnifier" type=search>
+       </div>
+       <div class="langRu">
+           <p>Рус</p>
+       </div>
+       <div class="langEng">
+           <p>Eng</p>
+       </div>
+      </div>   
+   </div>
+  <div class="contW">      
+   <div class="container">
+       <div class="left-meny">
+           <ul>
+               <li><a class="list-meny1" href="#"><img src="image/avatar.png" alt="аватар"><span class="spm1">Ольга</span></a><span id="icon">Оруженосец</span></li>
+               <li id="lm1"><a class="list-meny1" href="authorization.html"><img src="image/home.png" alt="аватар"><span class="spm1">Вход</span></a><br><a id="regmeny" href="registration.html"><span>Регистрация</span></a></li>
+               <li><a class="list-meny2" href="vyzovy1.html"><span class="spm2">Вызовы</span></a></li>
+               <li><a class="list-meny3" href="podvygi1.html"><span class="spm3">Подвиги</span></a></li>
+               <li><a class="list-meny4" href="#"><span class="spm4">Походы</span></a></li>
+               <li><a class="list-meny5" href="alltournament.html"><span class="spm5">Турниры</span></a></li>
+               <li><a class="list-meny6" href="achievements.html"><span class="spm6">Мой замок</span></a></li>
+               <li><a class="list-meny7" href="#"><span class="spm7">Кодекс рыцаря</span></a></li>
+               <li><a class="list-meny8" href="cancelaria.html"><span class="spm8">Канцелярия</span></a></li>
+           </ul>
+       </div>
+          <div class="contPodvig">
+              <div class="bodyPodvig">
+               <a class="allPodvigHref1NA" href="achievements.html">Мои достижения</a>
+               <a class="viewPodvigHref" href="mycastle.html">Регистрация</a>
+              <div class="reginput">
+                <form action="#" class="form" id="formRegistration">
+                    <label>Рыцарское имя<br> (логин)<span class="colRed">*</span>:</label><input type="text" name="login" class="regin" id="login" /><br>
+                    <label>Введите пароль<span class="colRed">*</span>:</label><input type="password" name="password" id="Password" class="regin" required /><br>
+                    <label>Повторите пароль<span class="colRed">*</span>:</label><input type="password" name="password2" id="ConfirmPassword" class="regin" required /><br>
+                    <label>e&#45;mail<span class="colRed">*</span>:</label><input type="email" name="email" class="regin" id="email"/>&nbsp;&nbsp;<input type="checkbox" name="vidno" class="vidnoEmail"> Видно всем<br>
+                    <label>Имя:</label><input type="text" name="name" class="regin" id="name" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем <br>
+                    <label>Фамилия:</label><input type="text" name="surname" class="regin" id="surname" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
+                    <label>Дата рождения:</label><input type="date" class="regin" id="regdate" name="date">&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
+                    <label>Страна:</label><input type="text" name="name" class="regin" id='country'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
+                    <label>Город:</label><input type="text" name="name" class="regin" id='sity'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                      
+                       <div class="categor1">
+                            <span class="catZag1">Ваши интересы: </span>
+                              <div class="catnew">
+                               <div id="magicsuggest"></div>
+                              </div> 
+                        </div>
+                        
+                        <div class="categor2">
+                            <div class="regcatZag1">Выши сильные<br> стороны: </div>
+                              <div class="catnew">
+                               <div id="magicsuggest2"></div>
+                              </div> 
+                        </div>
+                       
+                        <div class="entersoglasie">
+                              
+                                  <input type='checkbox' name='comment'>
+                            
+                                  <div class="soglasieText">Я подтверждаю, что ознакомлен с <a href="#" class="linkall">политикой конфиденциальности</a> и <a href="#" class="linkall">пользовательским соглашением</a></div>
+                              </div>
+                        <div class="saveVyz">
+                            <span><input type="submit" class="saveVyzBut7" value="Создать Замок"/></span>
+                        </div>
+                </form>
+                         
+             </div>   
+            </div>
+          </div>
+          <div class="footUp">
+                 <p><span id="footUpText">Расскажи друзьям: &nbsp;</span></p>
+                     <script type="text/javascript">(function() {
+                          if (window.pluso)if (typeof window.pluso.start == "function") return;
+                          if (window.ifpluso==undefined) { window.ifpluso = 1;
+                            var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                            s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                            s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                            var h=d[g]('body')[0];
+                            h.appendChild(s);
+                          }})();
+                    </script>
+                <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,linkedin"></div>
+         </div> 
+       </div>       
+   </div>
+   <div class="footer">     
+         <div class="footDown">
+             <div class="footDown1">
+                 <div class="footDown1_1">
+                     <p><a href="#">Политика конфеденциальности</a></p>
+                     <p><a href="#">Пользовательское соглашение</a></p>
+                 </div>
+                 <div class="footDown1_2">
+                     <p>admin@skillplus.me</p>
+                     <p><a href="cancelaria.html">Канцелярия</a></p>
+                 </div>
+                 <div class="footDown1_3">
+                     <p>&copy; 2018 SkillPlus.Me</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+</body>
+</html>

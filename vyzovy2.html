@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillPlus.Me</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <link href="css/magicsuggest-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zero.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    
+    
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="SkillPlus.Me"/>
+    <meta property="og:description" content="Опыт - лучший учитель"/>
+    <meta property="og:image" content="http://skillplus.me/image/meta-vyz.png"/>
+    <meta property="og:url" content="http://skillplus.me/"/>
+    <meta property="og:site_name" content="SkillPlus.Me"/>
+</head>
+<body>
+  <div class="header"> 
+      <div class="contW">     
+       <div class="logo">
+           <a href="index.html"><img class="logo-img" src="image/logo.png"></a> 
+       </div>
+       <div class='vyhod'>
+           <a href="#"><img src="image/vyhod.png" alt="Выход"><div>&nbsp;&nbsp;Выход</div></a>
+       </div>
+       <div class="search">
+           <input class="magnifier" type=search>
+       </div>
+       <div class="langRu">
+           <p>Рус</p>
+       </div>
+       <div class="langEng">
+           <p>Eng</p>
+       </div>
+      </div>
+     </div>
+  <div class="contW">     
+   <div class="container">
+       <div class="left-meny">
+           <ul>
+               <li><a class="list-meny1" href="#"><img src="image/avatar.png" alt="аватар"><span class="spm1">Ольга</span></a><span id="icon">Оруженосец</span></li>
+               <li id="lm1"><a class="list-meny1" href="authorization.html"><img src="image/home.png" alt="аватар"><span class="spm1">Вход</span></a><br><a id="regmeny" href="registration.html"><span>Регистрация</span></a></li>
+               <li><a class="list-meny2" href="vyzovy1.html"><span class="spm2">Вызовы</span></a></li>
+               <li><a class="list-meny3" href="podvygi1.html"><span class="spm3">Подвиги</span></a></li>
+               <li><a class="list-meny4" href="#"><span class="spm4">Походы</span></a></li>
+               <li><a class="list-meny5" href="alltournament.html"><span class="spm5">Турниры</span></a></li>
+               <li><a class="list-meny6" href="achievements.html"><span class="spm6">Мой замок</span></a></li>
+               <li><a class="list-meny7" href="#"><span class="spm7">Кодекс рыцаря</span></a></li>
+               <li><a class="list-meny8" href="cancelaria.html"><span class="spm8">Канцелярия</span></a></li>
+           </ul>
+       </div>
+          <div class="contPodvig">
+           <div class="bodyPodvig">
+               <a class="allPodvigHref1NA" href="vyzovy1.html">Все вызовы</a>
+               <a class="viewPodvigHref" href="vyzovy2.html">Добавить вызов</a>
+               <form action='#' id="creatVyz">
+                <div class="contVyzUp">
+                <div class="attention"><img src="image/Attention.png" alt="Внимание"> Внимание вы забыли заполнить некоторые важные поля
+                </div>
+                <div class="nameVyz"> 
+                      Название вызова<span class="colRed">*</span> <input type='text' name='title' class='text'>
+                </div>
+                <div class="typeVyz"> 
+                   
+                      Тип вызова<span class="colRed">*</span> <span class="quest"><img src="image/vopros.png" alt="подсказка"><span class="hint">Подсказки в качестве пояснения к полям &#40;при необходимости&#41;</span></span>
+                       <select name='TypeId' id="selectType" required>
+                            <option value=''>Выберите...</option>
+                            <option value=1>тип 1</option>
+                            <option value=2>тип 2</option>
+                            <option value=3>тип 3</option>
+                       </select>
+                   
+                </div>
+                <!--<div class="dostupn">
+                       <span class='dostupn1'>Доступно</span> <img src="image/vopros.png" alt="подсказка">
+                           <input type='radio' name='date' value=1 checked>
+                           <span id="dossp">Всегда</span>
+                           <input type='radio' name='date' value=2 >
+                           с <input class="dostupn2" type=date> по <input class="dostupn2" type=date>
+               </div>-->
+                <div class="categor">
+                    <span class="catZag">Категории<span class="colRed">*</span> </span><img src="image/vopros.png" alt="подсказка">
+                     
+                      <div class="catnew">
+                       <div id="magicsuggest"></div>
+                      </div> 
+                         
+                </div>
+                
+               </div>
+               <div class="instruc">
+                   <div class="instruc2">Инструкция по совершению подвига<span class="colRed">*</span></div>
+                   <img src="image/vopros.png" alt="подсказка">
+                   <textarea name="instructin"></textarea>
+                   <script>
+                        CKEDITOR.replace( 'instructin' );
+                   </script>
+               </div>
+               <div class="link_to_video">
+                   <div class="link_to_video1">Ссылка на видео</div>
+                   <img src="image/vopros.png" alt="подсказка">
+                   <input type='text' name='title' class='text' placeholder="https://">
+               </div>
+               <div class="name_meet">
+                   <div class="name_meet1">Название мероприятия</div>
+                   <img src="image/vopros.png" alt="подсказка">
+                   <input type='text' name='title' class='text'>
+               </div>
+               <div class="location">
+                   <div class="location1">Место проведения</div>
+                   <img src="image/vopros.png" alt="подсказка">
+                   <input type='text' name='title' class='text' placeholder="место">
+               </div>
+               <div class="time">
+                  <div class="time_name">
+                      Время проведения
+                  </div>
+                   <div class="time_start">
+                       
+                         старт <input class="dostupn2" type=date>  <input class="time_start2" type=time>
+                       
+                   </div>
+                   <div class="time_finish">
+                       
+                         финиш <input class="dostupn2" type=date>  <input class="time_start2" type=time>
+                       
+                   </div>
+               </div>
+               <div class="listAutor">  
+                      <div class="listAutor1">Перечислите организаторов </div><img src="image/vopros.png" alt="подсказка">
+                    
+                       <textarea name="enterAut"></textarea>
+                    
+                </div>
+               <div class="answr">
+                       <div class="answ0">Что принимать в качестве ответа<br> на вызов?</div>
+                       <img src="image/vopros.png" alt="подсказка">
+                   <div class="answ3">
+                       
+                           <input type="checkbox" checked>Указать, что в задании было знакомо<br>
+                           <input type="checkbox" checked>Указать, что в задании было новым<br>
+                           <input type="checkbox">Добавить вопрос, который возник при изучении<br>
+                           <input type="checkbox">Добавить идею, которая возникла при изучении<br>
+                           <input type="checkbox">Добавить комментарий<br>
+                           <input type="checkbox">Загрузить файлы<br>
+                       
+                   </div>
+                   <div class="showAnsw">
+                   <div class="showAnsw1">Кому показывать ответы на странице вызова?</div>
+                   <img src="image/vopros.png" alt="подсказка">
+                   <div class="showAnsv3">
+                       
+                           <input type="radio" name='answer' value=1 checked>Всем<br>
+                           <input type="radio" name='answer' value=2>Только зарегистрированным<br>
+                           <input type="radio" name='answer' value=3>Только мне и тому кто прислал<br><span class="showAnsv4"> ответ</span><br>
+                           <input type="radio" name='answer' value=4>Только мне и всем, кто прислал<br><span class="showAnsv4"> ответ</span>
+                       
+                   </div> 
+                </div>
+               </div> 
+               
+              <div class="saveVyz">
+                        <span><input type="submit" class="saveVyzBut8" value="Сохранить вызов"/></span>
+            
+                        <a class="DelVyz" href="vyzovy1.html">Отменить</a>
+                   </div>
+              </form>       
+               </div>            
+          </div>
+          <div class="footUp">
+             <p><span id="footUpText">Расскажи друзьям: &nbsp;</span></p>
+                 <script type="text/javascript">(function() {
+                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                  }})();
+                </script>
+                <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,linkedin"></div>
+         </div>
+       </div>   
+   </div>
+   <div class="footer">     
+         <div class="footDown">
+             <div class="footDown1">
+                 <div class="footDown1_1">
+                     <p><a href="#">Политика конфеденциальности</a></p>
+                     <p><a href="#">Пользовательское соглашение</a></p>
+                 </div>
+                 <div class="footDown1_2">
+                     <p>admin@skillplus.me</p>
+                     <p><a href="cancelaria.html">Канцелярия</a></p>
+                 </div>
+                 <div class="footDown1_3">
+                     <p>&copy; 2018 SkillPlus.Me</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+     
+     
+</body>
+</html>
