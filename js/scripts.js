@@ -188,32 +188,56 @@ $(document).ready(function() {
               }
     });
     $(".radio10").on("click",function() {
-          if($(this).is(':checked')) {  
-         var re = /.fil[0-4]/i;//хочу с помощью регулярных выражений найти класс начинающийся с .fil и заканчивающийся цифрой в диапазоне от 0 до 4. 
-         
-          var result = $('.select_blazon').find(re);//находим элемент эмеющий класс fil[0-4]; 
-         result.removeClass(re).addClass('fil1');//удаляем ненужный класс и присваиваем необходимый
-         }
+          if($(this).is(':checked')) { 
+              $('path').attr('class', function(index, classNames) {
+            return classNames + ' fil2';
+            });
+            $('polygon').attr('class', function(index, classNames) {
+            return classNames + ' fil2';
+            });
+            $('circle').attr('class', function(index, classNames) {
+            return classNames + ' fil2';
+            });
+              
+          }
     });
     $(".radio11").on("click",function() {
           if($(this).is(':checked')) {   
-              var re = /.fil[0-4]/i;
-          var result = $('.select_blazon').find(re);
-         result.removeClass(re).addClass('fil2');
+           $('path').attr('class', function(index, classNames) {
+            return classNames + ' fil2';
+            });
+            $('polygon').attr('class', function(index, classNames) {
+            return classNames + ' fil2';
+            });
+            $('circle').attr('class', function(index, classNames) {
+            return classNames + ' fil2';
+            });
          }
     });
     $(".radio12").on("click",function() {
           if($(this).is(':checked')) {   
-              var re = /.fil[0-4]/i;
-          var result = $('.select_blazon').find(re);
-         result.removeClass(re).addClass('fil3');
+          $('path').attr('class', function(index, classNames) {
+            return classNames + ' fil3';
+            });
+            $('polygon').attr('class', function(index, classNames) {
+            return classNames + ' fil3';
+            });
+            $('circle').attr('class', function(index, classNames) {
+            return classNames + ' fil3';
+            });
          }
     });
     $(".radio13").on("click",function() {
           if($(this).is(':checked')) {   
-              var re = /.fil[0-4]/i;
-          var result = $('.select_blazon').find(re);
-         result.removeClass(re).addClass('fil4');
+          $('path').attr('class', function(index, classNames) {
+            return classNames + ' fil4';
+            });
+            $('polygon').attr('class', function(index, classNames) {
+            return classNames + ' fil4';
+            });
+            $('circle').attr('class', function(index, classNames) {
+            return classNames + ' fil4';
+            });
          }
     });
 });
