@@ -150,10 +150,10 @@ $(function()
 	);
 });	
 
-$(document).ready(function() {
+/*$(document).ready(function() {
     $(".radio14").on("click",function() {
           if($(this).is(':checked')) {   
-              $('svg use').attr('xlink:href', '#herb1')
+              $('canvas').attr('xlink:href', '#herb1')
               }
     });
     $(".radio15").on("click",function() {
@@ -189,7 +189,7 @@ $(document).ready(function() {
     });
     $(".radio10").on("click",function() {
           if($(this).is(':checked')) { 
-              $('path').attr('class', function(index, classNames) {
+            $('path').attr('class', function(index, classNames) {
             return classNames + ' fil2';
             });
             $('polygon').attr('class', function(index, classNames) {
@@ -201,44 +201,176 @@ $(document).ready(function() {
               
           }
     });
-    $(".radio11").on("click",function() {
-          if($(this).is(':checked')) {   
-           $('path').attr('class', function(index, classNames) {
-            return classNames + ' fil2';
-            });
-            $('polygon').attr('class', function(index, classNames) {
-            return classNames + ' fil2';
-            });
-            $('circle').attr('class', function(index, classNames) {
-            return classNames + ' fil2';
-            });
-         }
-    });
-    $(".radio12").on("click",function() {
-          if($(this).is(':checked')) {   
-          $('path').attr('class', function(index, classNames) {
-            return classNames + ' fil3';
-            });
-            $('polygon').attr('class', function(index, classNames) {
-            return classNames + ' fil3';
-            });
-            $('circle').attr('class', function(index, classNames) {
-            return classNames + ' fil3';
-            });
-         }
-    });
-    $(".radio13").on("click",function() {
-          if($(this).is(':checked')) {   
-          $('path').attr('class', function(index, classNames) {
-            return classNames + ' fil4';
-            });
-            $('polygon').attr('class', function(index, classNames) {
-            return classNames + ' fil4';
-            });
-            $('circle').attr('class', function(index, classNames) {
-            return classNames + ' fil4';
-            });
-         }
-    });
-});
+});*/
+
+    
+function herbOne(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+              var ctx = canvas.getContext('2d');
+                 
+              var grd = ctx.createLinearGradient(65,0,0,0);
+                 grd.addColorStop(0,"#424242");
+                 grd.addColorStop(0,"#e4e4e4");
+                 ctx.clearRect(0, 0, 130, 130);
+                 ctx.beginPath();
+                 ctx.moveTo(65,7);
+                 ctx.lineTo(7,65);
+                 ctx.lineTo(65,123);
+                 ctx.lineTo(123,65);
+                 ctx.lineTo(65,7);
+                 ctx.closePath(); 
+                 ctx.strokeStyle = '#83cdf4';
+                 ctx.lineWidth = '7';
+                 ctx.fillStyle = grd;
+                 ctx.fill();
+                 ctx.stroke();
+                 
+             }
+};
+
+function herbTwo(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                    var ctx = canvas.getContext('2d');
+                     var grd = ctx.createLinearGradient(0,65,0,0);
+                     grd.addColorStop(0,"#424242");
+                     grd.addColorStop(0,"#e4e4e4");
+                     ctx.beginPath();
+                     ctx.clearRect(0, 0, 130, 130);
+                     ctx.arc(65, 65, 60, 0, Math.PI*2, false); 
+				     ctx.closePath(); 
+                     ctx.strokeStyle = '#83cdf4';
+                     ctx.lineWidth = '7';
+                     ctx.fillStyle = grd;
+                     ctx.fill();
+                     ctx.stroke();
+                
+             }
+};
+
+function herbThree(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(0.1,0,0,0.1);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");  
+                    ctx.beginPath();
+                    ctx.clearRect(0, 0, 130, 130);
+   					ctx.moveTo(20,3);
+   					ctx.quadraticCurveTo(-27, 50, 65,126);
+                    ctx.quadraticCurveTo(157, 50, 110,3);
+   					ctx.closePath(); 
+                    ctx.strokeStyle = '#83cdf4';
+                    ctx.lineWidth = '7';
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
+
+function herbFour(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(65,65,130,130);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");  
+                    ctx.beginPath();
+                    ctx.clearRect(0, 0, 130, 130);
+   					ctx.moveTo(3,3);
+   					ctx.quadraticCurveTo(10, 100, 65,126);
+                    ctx.quadraticCurveTo(120, 100, 127,3);
+   					ctx.closePath(); 
+                    ctx.strokeStyle = '#83cdf4';
+                    ctx.lineWidth = '7';
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+    };
+
+function herbFive(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(65,0,0,0);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");  
+                    ctx.beginPath();
+                    ctx.clearRect(0, 0, 130, 130);
+   					ctx.moveTo(3,3);
+   					ctx.lineTo(3, 95);
+   					ctx.bezierCurveTo(10, 137, 120, 137, 127,95);
+                    ctx.lineTo(127, 3);
+   					ctx.closePath(); 
+                    ctx.strokeStyle = '#83cdf4';
+                    ctx.lineWidth = '7';
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
+
+function herbSix(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    //var grd = ctx.createLinearGradient(65,0,0,0);
+                    //grd.addColorStop(0,"#424242");
+                    //grd.addColorStop(0,"#e4e4e4");  
+                    ctx.beginPath();
+                    ctx.clearRect(0, 0, 130, 130);
+   					ctx.moveTo(3,3);
+                    ctx.lineTo(3, 105);
+   					ctx.quadraticCurveTo(3,115, 15,115);
+                    ctx.lineTo(50, 115);
+                    ctx.quadraticCurveTo(65,115, 65,130);
+                    ctx.quadraticCurveTo(65,115, 80,115);
+                    ctx.lineTo(120, 115);
+                    ctx.quadraticCurveTo(127,115, 127,105);
+                    ctx.lineTo(127, 3);
+                    ctx.closePath(); 
+                    ctx.strokeStyle = '#83cdf4';
+                    ctx.lineWidth = '7';
+                    ctx.fillStyle = 'transparent';
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
+
+function herbSeven(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = //ctx.createLinearGradient(65,0,0,0);
+                    //grd.addColorStop(0,"#424242");
+                    //grd.addColorStop(0,"#e4e4e4");  
+                    ctx.beginPath();
+                    ctx.clearRect(0, 0, 130, 130);
+   				    ctx.moveTo(0,3);
+                    ctx.quadraticCurveTo(15,5, 15,20);
+                    ctx.lineTo(15,105);
+                    ctx.quadraticCurveTo(15,115, 25,115);
+                    ctx.lineTo(50, 115);
+                    ctx.quadraticCurveTo(65,115, 65,130);
+                    ctx.quadraticCurveTo(65,115, 80,115);
+                    ctx.lineTo(105, 115);
+                    ctx.quadraticCurveTo(115,115, 115,105);
+                    ctx.lineTo(115, 20);
+                    ctx.quadraticCurveTo(115,3, 130,3);
+                    ctx.closePath(); 
+                    ctx.strokeStyle = '#83cdf4';
+                    ctx.lineWidth = '7';
+                    ctx.fillStyle = "transparent"
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
 	

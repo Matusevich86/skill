@@ -4509,7 +4509,7 @@ div#magicsuggest2 {
     left: 0;
     width: 45px;
     height: 45px;
-    background: linear-gradient(to top, #e4e4e4 50%, #424242 50%);
+    background: linear-gradient(to bottom, #e4e4e4 50%, #424242 50%);
 }
 
 .radio12 + label:before {
@@ -4529,7 +4529,7 @@ div#magicsuggest2 {
     left: 0;
     width: 45px;
     height: 45px;
-    background: linear-gradient(to bottom right, #e4e4e4 50%, #424242 50%);
+    background: linear-gradient(to bottom right, #424242 50%, #e4e4e4 50%);
 }
 
 .radio14 + label:before {
@@ -4711,8 +4711,26 @@ div#magicsuggest2 {
 .creat_blazon1 {
     position: relative;
 }
-.select_blazon svg {
-   width: 100%;
+
+#herb1 {
+    width: 130px;
+    height: 130px;
 }
 
 
+
+.saveVyzBut14 {
+    height: 40px;
+    width: 200px;
+    border-radius: 6px;
+    border-style: none;
+    background-color: #508bbd;
+    color: white;
+    font-size: 16px;
+    margin: 10px 50px 20px 420px;
+    cursor: pointer;
+}
+
+.saveVyzBut14:hover {
+    background-color: #6a9d43;
+}
