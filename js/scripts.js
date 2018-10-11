@@ -208,10 +208,6 @@ function herbOne(){
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
               var ctx = canvas.getContext('2d');
-                 
-              var grd = ctx.createLinearGradient(65,0,0,0);
-                 grd.addColorStop(0,"#424242");
-                 grd.addColorStop(0,"#e4e4e4");
                  ctx.clearRect(0, 0, 130, 130);
                  ctx.beginPath();
                  ctx.moveTo(65,7);
@@ -222,8 +218,6 @@ function herbOne(){
                  ctx.closePath(); 
                  ctx.strokeStyle = '#83cdf4';
                  ctx.lineWidth = '7';
-                 ctx.fillStyle = grd;
-                 ctx.fill();
                  ctx.stroke();
                  
              }
@@ -252,10 +246,7 @@ function herbTwo(){
 function herbThree(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(0.1,0,0,0.1);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");  
+                   var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
                     ctx.clearRect(0, 0, 130, 130);
    					ctx.moveTo(20,3);
@@ -264,8 +255,6 @@ function herbThree(){
    					ctx.closePath(); 
                     ctx.strokeStyle = '#83cdf4';
                     ctx.lineWidth = '7';
-                    ctx.fillStyle = grd;
-                    ctx.fill();
                     ctx.stroke();
                 
              }
@@ -274,10 +263,7 @@ function herbThree(){
 function herbFour(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(65,65,130,130);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");  
+                   var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
                     ctx.clearRect(0, 0, 130, 130);
    					ctx.moveTo(3,3);
@@ -286,8 +272,6 @@ function herbFour(){
    					ctx.closePath(); 
                     ctx.strokeStyle = '#83cdf4';
                     ctx.lineWidth = '7';
-                    ctx.fillStyle = grd;
-                    ctx.fill();
                     ctx.stroke();
                 
              }
@@ -296,10 +280,7 @@ function herbFour(){
 function herbFive(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(65,0,0,0);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");  
+                   var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
                     ctx.clearRect(0, 0, 130, 130);
    					ctx.moveTo(3,3);
@@ -309,8 +290,6 @@ function herbFive(){
    					ctx.closePath(); 
                     ctx.strokeStyle = '#83cdf4';
                     ctx.lineWidth = '7';
-                    ctx.fillStyle = grd;
-                    ctx.fill();
                     ctx.stroke();
                 
              }
@@ -319,10 +298,7 @@ function herbFive(){
 function herbSix(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    //var grd = ctx.createLinearGradient(65,0,0,0);
-                    //grd.addColorStop(0,"#424242");
-                    //grd.addColorStop(0,"#e4e4e4");  
+                   var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
                     ctx.clearRect(0, 0, 130, 130);
    					ctx.moveTo(3,3);
@@ -337,8 +313,6 @@ function herbSix(){
                     ctx.closePath(); 
                     ctx.strokeStyle = '#83cdf4';
                     ctx.lineWidth = '7';
-                    ctx.fillStyle = 'transparent';
-                    ctx.fill();
                     ctx.stroke();
                 
              }
@@ -347,10 +321,7 @@ function herbSix(){
 function herbSeven(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = //ctx.createLinearGradient(65,0,0,0);
-                    //grd.addColorStop(0,"#424242");
-                    //grd.addColorStop(0,"#e4e4e4");  
+                   var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
                     ctx.clearRect(0, 0, 130, 130);
    				    ctx.moveTo(0,3);
@@ -367,7 +338,69 @@ function herbSeven(){
                     ctx.closePath(); 
                     ctx.strokeStyle = '#83cdf4';
                     ctx.lineWidth = '7';
-                    ctx.fillStyle = "transparent"
+                    ctx.stroke();
+                
+             }
+};
+
+function grdOne(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(65,0,0,0);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");
+                    var ctx2 = document.getElementById('herb1');
+                    ctx.drawImage(ctx2, 0, 0);
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
+
+function grdTwo(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(0,65,0,0);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");
+                    var ctx2 = document.getElementById('herb1');
+                    ctx.drawImage(ctx2, 0, 0);
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
+
+function grdThree(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(0.1,0,0,0.1);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");
+                    var ctx2 = document.getElementById('herb1');
+                    ctx.drawImage(ctx2, 0, 0);
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.stroke();
+                
+             }
+};
+
+function grdFour(){   
+        var canvas = document.getElementById('herb1');
+             if (canvas.getContext){
+                   var ctx = canvas.getContext('2d');
+                    var grd = ctx.createLinearGradient(65,65,130,130);
+                    grd.addColorStop(0,"#424242");
+                    grd.addColorStop(0,"#e4e4e4");
+                    var ctx2 = document.getElementById('herb1');
+                    ctx.drawImage(ctx2, 0, 0);
+                    ctx.fillStyle = grd;
                     ctx.fill();
                     ctx.stroke();
                 
