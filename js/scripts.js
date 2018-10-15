@@ -157,7 +157,7 @@ function changeItem() {
             document.getElementById('changeColor').style.background = '#508bbd';
          } 
 
-/*function herbOne(){   
+function herbOne(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
               var ctx = canvas.getContext('2d');
@@ -291,7 +291,7 @@ function herbSeven(){
              }
 };
 
-function grdOne(){   
+/*function grdOne(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');
@@ -398,5 +398,66 @@ function herbS(){
                var herbShape = radio[7].value;
                console.log(herbShape);
          }
+}
+
+function drawHerb(){   
+  var canvas = document.getElementById('herb1');
+  var ctx = canvas.getContext('2d');
+
+  ctx.clearRect(0, 0, 130, 130);
+  
+  var herbShape = 0;
+  switch ( herbShape ) {
+      case 1:
+         herbOne();
+         break; 
+      case 2:
+         herbTwo();
+         break;
+      case 3:
+         herbThree();
+         break;
+      case 4:
+         herbFour();
+         break;
+      case 5:
+         herbFive();
+         break;
+      case 6:
+         herbSix();
+         break;
+      case 7:
+         herbSeven();
+         break;
+  }
+      
+  var grd="none";
+  switch ( grd ) {
+    case 1: // вертикальное разделение
+      var grd = ctx.createLinearGradient(65,0,0,0);
+      grd.addColorStop(0,herbColor1);
+      grd.addColorStop(0,herbColor2);
+      break;
+    case 2:
+      var grd = ctx.createLinearGradient(65,0,0,0);
+      grd.addColorStop(0,herbColor1);
+      grd.addColorStop(0,herbColor2);
+      break;
+    case 3: 
+      var grd = ctx.createLinearGradient(0.1,0,0,0.1);
+      grd.addColorStop(0,herbColor1);
+      grd.addColorStop(0,herbColor2);
+      break;
+    case 4: 
+      var grd = ctx.createLinearGradient(65,65,130,130);
+      grd.addColorStop(0,herbColor1);
+      grd.addColorStop(0,herbColor2);
+      break;
+  }
+  var ctx2 = document.getElementById('herb1');
+  ctx.drawImage(ctx2, 0, 0);
+  ctx.fillStyle = grd;
+  ctx.fill();
+  ctx.stroke();              
 }
 
