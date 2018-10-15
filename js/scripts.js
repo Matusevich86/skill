@@ -157,7 +157,7 @@ function changeItem() {
             document.getElementById('changeColor').style.background = '#508bbd';
          } 
 
-function herbOne(){   
+/*function herbOne(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
               var ctx = canvas.getContext('2d');
@@ -291,7 +291,7 @@ function herbSeven(){
              }
 };
 
-/*function grdOne(){   
+function grdOne(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');
@@ -355,12 +355,48 @@ function grdFour(){
              }
 };*/
 
-var herbShape = 0;
-var radio = document.getElementsByName('back');
 
-for (var i=0; i<radio.length; i++) {
-    radio[i].onclick = herbShape;
+function herbS(){
+       var radio = document.getElementsByName('back');
+       if (radio[0].checked)
+        {
+               var herbShape = radio[0].value;
+               console.log(herbShape);
+        }
+        else if (radio[1].checked)
+        {
+               var herbShape = radio[1].value;
+               console.log(herbShape);
+         }
+        else if (radio[2].checked)
+        {
+               var herbShape = radio[2].value;
+               console.log(herbShape);
+         }
+         else if (radio[3].checked)
+        {
+               var herbShape = radio[3].value;
+               console.log(herbShape);
+         }
+        else if (radio[4].checked)
+        {
+               var herbShape = radio[4].value;
+               console.log(herbShape);
+         }
+         else if (radio[5].checked)
+        {
+               var herbShape = radio[5].value;
+               console.log(herbShape);
+         }
+         else if (radio[6].checked)
+        {
+               var herbShape = radio[6].value;
+               console.log(herbShape);
+         }
+         else if (radio[7].checked)
+        {
+               var herbShape = radio[7].value;
+               console.log(herbShape);
+         }
 }
-function herbShape(){
-      console.log (this.value);
-}
+
