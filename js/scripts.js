@@ -150,60 +150,13 @@ $(function()
 	);
 });	
 
-/*$(document).ready(function() {
-    $(".radio14").on("click",function() {
-          if($(this).is(':checked')) {   
-              $('canvas').attr('xlink:href', '#herb1')
-              }
-    });
-    $(".radio15").on("click",function() {
-          if($(this).is(':checked')) {   
-              $('svg use').attr('xlink:href', '#herb2')
-              }
-    });
-    $(".radio16").on("click",function() {
-          if($(this).is(':checked')) {   
-              $('svg use').attr('xlink:href', '#herb3')
-              }
-    }); 
-    $(".radio17").on("click",function() {
-          if($(this).is(':checked')) {   
-              $('svg use').attr('xlink:href', '#herb4')
-              }
-    }); 
-    $(".radio18").on("click",function() {
-          if($(this).is(':checked')) {   
-              $('svg use').attr('xlink:href', '#herb5')
-              }
-    });
-    $(".radio19").on("click",function() {
-          if($(this).is(':checked')) {   
-              $('svg use').attr('xlink:href', '#herb6')
-              }
-    });
-    $(".radio20").on("click",function() {
-          if($(this).is(':checked')) { 
-              
-              $('svg use').attr('xlink:href', '#herb7')
-              }
-    });
-    $(".radio10").on("click",function() {
-          if($(this).is(':checked')) { 
-            $('path').attr('class', function(index, classNames) {
-            return classNames + ' fil2';
-            });
-            $('polygon').attr('class', function(index, classNames) {
-            return classNames + ' fil2';
-            });
-            $('circle').attr('class', function(index, classNames) {
-            return classNames + ' fil2';
-            });
-              
-          }
-    });
-});*/
+function changeItem() {
+            document.getElementById('changeColor').style.background = '#6a9d43';
+         }
+         function rechangeItem() {
+            document.getElementById('changeColor').style.background = '#508bbd';
+         } 
 
-    
 function herbOne(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
@@ -227,17 +180,12 @@ function herbTwo(){
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
                     var ctx = canvas.getContext('2d');
-                     var grd = ctx.createLinearGradient(0,65,0,0);
-                     grd.addColorStop(0,"#424242");
-                     grd.addColorStop(0,"#e4e4e4");
                      ctx.beginPath();
                      ctx.clearRect(0, 0, 130, 130);
                      ctx.arc(65, 65, 60, 0, Math.PI*2, false); 
 				     ctx.closePath(); 
                      ctx.strokeStyle = '#83cdf4';
                      ctx.lineWidth = '7';
-                     ctx.fillStyle = grd;
-                     ctx.fill();
                      ctx.stroke();
                 
              }
@@ -343,7 +291,7 @@ function herbSeven(){
              }
 };
 
-function grdOne(){   
+/*function grdOne(){   
         var canvas = document.getElementById('herb1');
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');
@@ -405,5 +353,14 @@ function grdFour(){
                     ctx.stroke();
                 
              }
-};
-	
+};*/
+
+var herbShape = 0;
+var radio = document.getElementsByName('back');
+
+for (var i=0; i<radio.length; i++) {
+    radio[i].onclick = herbShape;
+}
+function herbShape(){
+      console.log (this.value);
+}
