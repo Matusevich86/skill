@@ -291,113 +291,156 @@ function herbSeven(){
              }
 };
 
-/*function grdOne(){   
-        var canvas = document.getElementById('herb1');
-             if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(65,0,0,0);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");
-                    var ctx2 = document.getElementById('herb1');
-                    ctx.drawImage(ctx2, 0, 0);
-                    ctx.fillStyle = grd;
-                    ctx.fill();
-                    ctx.stroke();
-                
-             }
-};
-
-function grdTwo(){   
-        var canvas = document.getElementById('herb1');
-             if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(0,65,0,0);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");
-                    var ctx2 = document.getElementById('herb1');
-                    ctx.drawImage(ctx2, 0, 0);
-                    ctx.fillStyle = grd;
-                    ctx.fill();
-                    ctx.stroke();
-                
-             }
-};
-
-function grdThree(){   
-        var canvas = document.getElementById('herb1');
-             if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(0.1,0,0,0.1);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");
-                    var ctx2 = document.getElementById('herb1');
-                    ctx.drawImage(ctx2, 0, 0);
-                    ctx.fillStyle = grd;
-                    ctx.fill();
-                    ctx.stroke();
-                
-             }
-};
-
-function grdFour(){   
-        var canvas = document.getElementById('herb1');
-             if (canvas.getContext){
-                   var ctx = canvas.getContext('2d');
-                    var grd = ctx.createLinearGradient(65,65,130,130);
-                    grd.addColorStop(0,"#424242");
-                    grd.addColorStop(0,"#e4e4e4");
-                    var ctx2 = document.getElementById('herb1');
-                    ctx.drawImage(ctx2, 0, 0);
-                    ctx.fillStyle = grd;
-                    ctx.fill();
-                    ctx.stroke();
-                
-             }
-};*/
-
+var herbShape = 0;
+var herbGrad=0;
+var herbColor1= "#e4e4e4"; 
+var herbColor2= "#424242"; 
 
 function herbS(){
        var radio = document.getElementsByName('back');
        if (radio[0].checked)
         {
-               var herbShape = radio[0].value;
-               console.log(herbShape);
+               herbShape = radio[0].value;
         }
         else if (radio[1].checked)
         {
-               var herbShape = radio[1].value;
-               console.log(herbShape);
+               herbShape = radio[1].value;
          }
         else if (radio[2].checked)
         {
-               var herbShape = radio[2].value;
-               console.log(herbShape);
+               herbShape = radio[2].value;
          }
          else if (radio[3].checked)
         {
-               var herbShape = radio[3].value;
-               console.log(herbShape);
+               herbShape = radio[3].value;
          }
         else if (radio[4].checked)
         {
-               var herbShape = radio[4].value;
-               console.log(herbShape);
+               herbShape = radio[4].value;
          }
          else if (radio[5].checked)
         {
-               var herbShape = radio[5].value;
-               console.log(herbShape);
+               herbShape = radio[5].value;
          }
          else if (radio[6].checked)
         {
-               var herbShape = radio[6].value;
-               console.log(herbShape);
+               herbShape = radio[6].value;
          }
          else if (radio[7].checked)
         {
-               var herbShape = radio[7].value;
-               console.log(herbShape);
+               herbShape = radio[7].value;
          }
+    drawHerb();
+}
+
+function grdOne(){
+       var radio = document.getElementsByName('division');
+
+       if (radio[0].checked)
+        {
+               herbGrad = radio[0].value;
+        }
+        else if (radio[1].checked)
+        {
+               herbGrad = radio[1].value;
+         }
+        else if (radio[2].checked)
+        {
+               herbGrad = radio[2].value;
+         }
+         else if (radio[3].checked)
+        {
+               herbGrad = radio[3].value;
+         }
+        else if (radio[4].checked)
+        {
+               herbGrad = radio[4].value;
+         }
+    drawHerb();
+}
+
+function herbCol1(){
+       var radio = document.getElementsByName('color1');
+
+       if (radio[0].checked)
+        {
+               herbColor1 = radio[0].value;
+        }
+        else if (radio[1].checked)
+        {
+               herbColor1 = radio[1].value;
+         }
+        else if (radio[2].checked)
+        {
+               herbColor1 = radio[2].value;
+         }
+         else if (radio[3].checked)
+        {
+               herbColor1 = radio[3].value;
+         }
+        else if (radio[4].checked)
+        {
+               herbColor1 = radio[4].value;
+         }
+         if (radio[5].checked)
+        {
+               herbColor1 = radio[5].value;
+        }
+        else if (radio[6].checked)
+        {
+               herbColor1 = radio[6].value;
+         }
+        else if (radio[7].checked)
+        {
+               herbColor1 = radio[7].value;
+         }
+         else if (radio[8].checked)
+        {
+               herbColor1 = radio[8].value;
+         }
+    drawHerb();
+}
+
+function herbCol2(){
+       var radio = document.getElementsByName('color2');
+
+       if (radio[0].checked)
+        {
+               herbColor2 = radio[0].value;
+        }
+        else if (radio[1].checked)
+        {
+               herbColor2 = radio[1].value;
+         }
+        else if (radio[2].checked)
+        {
+               herbColor2 = radio[2].value;
+         }
+         else if (radio[3].checked)
+        {
+               herbColor2 = radio[3].value;
+         }
+        else if (radio[4].checked)
+        {
+               herbColor2 = radio[4].value;
+         }
+         if (radio[5].checked)
+        {
+               herbColor2 = radio[5].value;
+        }
+        else if (radio[6].checked)
+        {
+               herbColor2 = radio[6].value;
+         }
+        else if (radio[7].checked)
+        {
+               herbColor2 = radio[7].value;
+         }
+         else if (radio[8].checked)
+        {
+               herbColor2 = radio[8].value;
+         }
+    drawHerb();
 }
 
 function drawHerb(){   
@@ -406,54 +449,114 @@ function drawHerb(){
 
   ctx.clearRect(0, 0, 130, 130);
   
-  var herbShape = 0;
+  
   switch ( herbShape ) {
-      case 1:
+      case "1":
          herbOne();
          break; 
-      case 2:
+      case "2":
          herbTwo();
          break;
-      case 3:
+      case "3":
          herbThree();
          break;
-      case 4:
+      case "4":
          herbFour();
          break;
-      case 5:
+      case "5":
          herbFive();
          break;
-      case 6:
+      case "6":
          herbSix();
          break;
-      case 7:
+      case "7":
          herbSeven();
          break;
   }
+    
+      switch ( herbColor1 ) {
+      case "1":
+         herbColor1 = "#e4e4e4";
+         break; 
+      case "2":
+         herbColor1 = "#424242";
+         break;
+      case "3":
+         herbColor1 = "#e9cb5d";
+         break;
+      case "4":
+         herbColor1 = "#ec9049";
+         break;
+      case "5":
+         herbColor1 = "#89dbf3";
+         break;
+      case "6":
+         herbColor1 = "#54a3e5";
+         break;
+      case "7":
+         herbColor1 = "#40c62b";
+         break;
+       case "8":
+         herbColor1 = "#059535";
+         break;
+      case "9":
+         herbColor1 = "#80243e";
+         break;
+  }
+          switch ( herbColor2 ) {
+      case "1":
+         herbColor2 = "#e4e4e4";
+         break; 
+      case "2":
+         herbColor2 = "#424242";
+         break;
+      case "3":
+         herbColor2 = "#e9cb5d";
+         break;
+      case "4":
+         herbColor2 = "#ec9049";
+         break;
+      case "5":
+         herbColor2 = "#89dbf3";
+         break;
+      case "6":
+         herbColor2 = "#54a3e5";
+         break;
+      case "7":
+         herbColor2 = "#40c62b";
+         break;
+       case "8":
+         herbColor2 = "#059535";
+         break;
+      case "9":
+         herbColor2 = "#80243e";
+         break;
+  }
       
-  var grd="none";
-  switch ( grd ) {
-    case 1: // вертикальное разделение
+  switch ( herbGrad ) {
+    case "1": // вертикальное разделение
       var grd = ctx.createLinearGradient(65,0,0,0);
-      grd.addColorStop(0,herbColor1);
       grd.addColorStop(0,herbColor2);
-      break;
-    case 2:
-      var grd = ctx.createLinearGradient(65,0,0,0);
       grd.addColorStop(0,herbColor1);
-      grd.addColorStop(0,herbColor2);
       break;
-    case 3: 
+    case "2":
+      var grd = ctx.createLinearGradient(0,65,0,0);
+      grd.addColorStop(0,herbColor2);
+      grd.addColorStop(0,herbColor1);
+      break;
+    case "3": 
       var grd = ctx.createLinearGradient(0.1,0,0,0.1);
-      grd.addColorStop(0,herbColor1);
       grd.addColorStop(0,herbColor2);
+      grd.addColorStop(0,herbColor1);
       break;
-    case 4: 
+    case "4": 
       var grd = ctx.createLinearGradient(65,65,130,130);
-      grd.addColorStop(0,herbColor1);
       grd.addColorStop(0,herbColor2);
+      grd.addColorStop(0,herbColor1);
       break;
   }
+    
+
   var ctx2 = document.getElementById('herb1');
   ctx.drawImage(ctx2, 0, 0);
   ctx.fillStyle = grd;
