@@ -292,9 +292,9 @@ function herbSeven(){
 };
 
 var herbShape = 0;
-var herbGrad=0;
-var herbColor1= "#e4e4e4"; 
-var herbColor2= "#424242"; 
+var herbGrad = 0;
+var herbColor1 = "#e4e4e4"; 
+var herbColor2 = "#424242"; 
 
 function herbS(){
        var radio = document.getElementsByName('back');
@@ -564,3 +564,78 @@ function drawHerb(){
   ctx.stroke();              
 }
 
+
+$(document).ready(function(){
+    $("#showHideContent").click(function () {
+        if ($("#content").is(":hidden")) {
+            $("#content").show("slow");
+        } else {
+            $("#content").hide("slow");
+        }
+        return false;
+    });
+});
+
+$(document).ready(function(){
+  $(".lentaNews_1").each(function (index) {
+      $(this).find('.lenta_del_link').click(function(){
+          $(this).parents(".lentaNews_1").hide("slow");
+      });
+  });
+});
+
+$(document).ready(function(){
+  $(".lentaNews").each(function (index) {
+      $(this).find('.lenta_del_link').click(function(){
+          $(this).parents(".lentaNews").hide("slow");
+      });
+  });
+});
+
+$(document).ready(function(){
+    $("#showNotif").click(function () {
+        if ($("#contNotif").is(":hidden")) {
+            $("#contNotif").show("slow");
+        } else {
+            $("#contNotif").hide("slow");
+        }
+        return false;
+    });
+});
+
+$(document).ready(function(){
+    $("#hideNotification").click(function () {
+        if ($("#contNotif").is(":hidden")) {
+            $("#contNotif").show("slow");
+        } else {
+            $("#contNotif").hide("slow");
+        }
+        return false;
+    });
+});
+
+jQuery(document).ready(function(){
+    jQuery('.scrollbar-chrome').scrollbar();
+});
+
+jQuery(document).ready(function(){
+    jQuery('.scrollbar-chrome_Castle').scrollbar();
+});
+
+$(document).ready(function(){
+    $('.castleSlider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 10,
+    centerMode: true,
+    variableWidth: true,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="image/tourn_L.png"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="image/tourn_R.png"></button>'
+    });
+});
+
+$(document).ready(function(){
+  $("#myTable").tablesorter();
+});

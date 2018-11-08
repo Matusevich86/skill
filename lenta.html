@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillPlus.Me</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <link href="css/magicsuggest-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zero.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"> 
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="SkillPlus.Me"/>
+    <meta property="og:description" content="Опыт - лучший учитель"/>
+    <meta property="og:image" content="http://skillplus.me/image/meta-vyz.png"/>
+    <meta property="og:url" content="http://skillplus.me/"/>
+    <meta property="og:site_name" content="SkillPlus.Me"/>
+</head>
+<body>
+  <div class="header"> 
+      <div class="contW">     
+       <div class="logo">
+           <a href="index.html"><img class="logo-img" src="image/logo.png"></a> 
+       </div>
+       <div class='vyhod'>
+           <a href="#"><img src="image/vyhod.png" alt="Выход"><div>&nbsp;&nbsp;Выход</div></a>
+       </div>
+       <div class="notification">
+           <img src="image/notification10.png" alt="Уведомления" id="showNotif">
+                       
+                        <div class="notification_1" id="contNotif">
+                        <div class="hostik"></div>
+                         <img src="image/notification7.png" alt="закрыть" class="hideNocif" id="hideNotification">
+                          <div class="scrollbar-chrome">
+                           
+                            <a href="#" class="linkNotification">
+                               <div class="notification_2">
+                                <div class="notifimg"><img src="image/notification2.png" alt="картинка"></div>
+                                <div>По вашему подвигу добавлен комментарий: <span class="fWB">“Содержание комментария (в одну строку)...”</span></div>
+                               </div>
+                            </a>
+                            <a href="#" class="linkNotification">
+                                <div class="notification_2">
+                                    <div class="notifimg"><img src="image/notification3.png" alt="картинка"></div>
+                                    <div><span class="fWB">Логин защитника</span> оценил ваш комментарий <span class="fWB">“Содержание комментария (в одну строку)...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_2">
+                                    <div class="notifimg"><img src="image/notification1.png" alt="картинка"></div>
+                                    <div>Оставлено 5 ответов на ваш комментарий <span class="fWB">“Содержание комментария (в одну строку)...”</span></div>
+                                </div>
+                            </a>
+                             
+                            <a href="#" class="linkNotification">
+                                <div class="notification_2">
+                                    <div class="notifimg"><img src="image/notification4.png" alt="картинка"></div>
+                                    <div>На вас подписался пользователь  <span class="fWB">“Логин пользователя”</span></div>
+                                </div>
+                            </a>
+                               
+                            <a href="#" class="linkNotification">
+                                <div class="notification_2">
+                                    <div class="notifimg"><img src="image/notification5.png" alt="картинка"></div>
+                                    <div>На ваш турнир подал заявку Защитник <span class="fWB">“Логин пользователя”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_2">
+                                    <div class="notifimg"><img src="image/notification5.png" alt="картинка"></div>
+                                    <div>На ваш турнир подал заявку Судья <span class="fWB">“Логин пользователя”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification5.png" alt="картинка"></div>
+                                    <div><span class="fWB">Логин пользователя</span> пригласил вас судить его турнир <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification6.png" alt="картинка"></div>
+                                    <div>Одобрена ваша заявка на вакансию Защитника в турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification7.png" alt="картинка"></div>
+                                    <div>Отклонена ваша заявка на вакансию Защитника в турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification5.png" alt="картинка"></div>
+                                    <div>Одобрена ваша заявка на вакансию Судьи в турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification7.png" alt="картинка"></div>
+                                    <div>Отклонена ваша заявка на вакансию Судьи в турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification7.png" alt="картинка"></div>
+                                    <div>Вы исключены из турнира <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification7.png" alt="картинка"></div>
+                                    <div>Зашитник <span class="fWB">Логин защитника</span> отказался от участия в вашем турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification9.png" alt="картинка"></div>
+                                    <div>Получен ответ на задание в вашем турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification8.png" alt="картинка"></div>
+                                    <div>Судья оценил ответ по заданию в вашем турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification7.png" alt="картинка"></div>
+                                    <div>Судья отклонил ответ по заданию в вашем турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification9.png" alt="картинка"></div>
+                                    <div>Получен ответ на задание турнира, который вы судите <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification8.png" alt="картинка"></div>
+                                    <div>Оценён ваш ответ на задание в турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="linkNotification">
+                                <div class="notification_3">
+                                    <div class="notifimg"><img src="image/notification7.png" alt="картинка"></div>
+                                    <div>Отклонён ваш ответ на задание в турнире <span class="fWB">“Название турнира...”</span></div>
+                                </div>
+                            </a>
+                            
+                          </div>    
+                        </div>
+                        
+                       
+       </div>
+       <div class="search">
+           <input class="magnifier" type=search>
+       </div>
+       <div class="langRu">
+           <p>Рус</p>
+       </div>
+       <div class="langEng">
+           <p>Eng</p>
+       </div>
+      </div>
+     </div>
+  <div class="contW">     
+   <div class="container">
+       <div class="left-meny">
+           <ul>
+               <li><a class="list-meny1" href="#"><img src="image/avatar.png" alt="аватар"><span class="spm1">Ольга</span></a><span id="icon">Оруженосец</span></li>
+               <li id="lm1"><a class="list-meny1" href="authorization.html"><img src="image/home.png" alt="аватар"><span class="spm1">Вход</span></a><br><a id="regmeny" href="registration.html"><span>Регистрация</span></a></li>
+               <li><a class="list-meny2" href="vyzovy1.html"><span class="spm2">Вызовы</span></a></li>
+               <li><a class="list-meny3" href="podvygi1.html"><span class="spm3">Подвиги</span></a></li>
+               <li><a class="list-meny4" href="#"><span class="spm4">Походы</span></a></li>
+               <li><a class="list-meny5" href="alltournament.html"><span class="spm5">Турниры</span></a></li>
+               <li><a class="list-meny6" href="achievements.html"><span class="spm6">Мой замок</span></a></li>
+               <li><a class="list-meny7" href="#"><span class="spm7">Кодекс рыцаря</span></a></li>
+               <li><a class="list-meny8" href="cancelaria.html"><span class="spm8">Канцелярия</span></a></li>
+           </ul>
+       </div>
+          <div class="contPodvig">
+           <div class="bodyPodvig">
+               <a class="allPodvigHref1" href="alltournament.html">Рыцарские новости</a>
+               <a class="viewPodvigHrefNA" href="previewtournament.html">Достижения</a>
+               <a class="detalyVuzHrefNA" href="progtournCastle12.html">Настройки</a> 
+                    
+        <div class="rightCol">
+           <div class="right_col_body">
+            <p class="right_col_name">Рекомендации</p>
+                <div class="right_col_text">
+                    <div class="mr5px"><img src="image/mini_gorn.png" alt="Вызов"></div>
+                    <div>Вызов <a href="#" class="linkNew">Название вызова (в две строки - остальное сокращат...</a></div>
+                </div>
+                    <div class="right_col_text">
+                        <div class="mr5px"><img src="image/mini_castle.png" alt="Турнир"></div>
+                        <div>Турнир <a href="#" class="linkNew">Название вызова (в две строки - остальное сокращат...</a></div>
+                    </div>
+                        <div class="right_col_text">
+                            <div class="mr5px"><img src="image/mini_shlem.png" alt="Вызов"></div>
+                            <div>Вызов <a href="#" class="linkNew">Название вызова (в две строки - остальное сокращат...</a></div>
+                        </div>
+                            <div class="right_col_text">
+                                <div class="mr5px"><img src="image/mini_canvas.png" alt="Вызов"></div>
+                                <div>Вызов <a href="#" class="linkNew">Название вызова (в две строки - остальное сокращат...</a></div>
+                            </div>
+                                <div class="right_col_text">
+                                    <div class="mr5px"><img src="image/mini_map.png" alt="Вызов"></div>
+                                    <div>Вызов <a href="#" class="linkNew">Название вызова (в две строки - остальное сокращат...</a></div>
+                                </div>
+            <input type="submit" class="but_nastroika3" value="Все рекомендации">
+            <input type="submit" id="showHideContent" class="but_nastroika" value="Настроить рекомендации">
+           </div>
+               <div id="content" class="nastroika">
+                   <div class="nastroika2">Настроить рекомендации</div>
+                       <div class="nastroika3">
+                         <form action="">
+                          <input type="radio" name="nastr" value="1"> По хронологии <br>
+                          <input type="radio" name="nastr" value="2"> Группировать <br>
+                              <input type="submit" class="but_nastroika2" value="Ok">
+                         </form>  
+                       </div>
+               </div>
+        </div>
+        
+        
+        
+        
+        <div class="leftCol">
+            <div class="lentaNews">
+               <div class="lentaimg">
+                  <img class="l_i_1" src="image/newvyzbl.png" alt="новый вызов">
+                  <img class="l_i_2" src="image/lentahand.png" alt="новый вызов">  
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">По категории <a class="linkNew" href="#">Название_категории</a>, на которую вы подписаны, <a class="linkNew" href="#">Логин_зачинщика</a> бросил вызов. Тип <a class="linkNew" href="#">"Просмотреть"</a></p>
+                   </div> 
+                       <div class="line"></div>
+                          <div class="mt20"></div>
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>             
+            </div>
+            
+            <div class="lentaNews">
+               <div class="lentaimg">
+                  <img class="l_i_1" src="image/newtournor.png" alt="новый турнир">
+                  <img class="l_i_2" src="image/lentakop.png" alt="новый турнир">  
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">По категории <a class="linkNew" href="#">Название_категории</a>, на которую вы подписаны, <a class="linkNew" href="#">Логин_зачинщика</a> бросил вызов. Тип <a class="linkNew" href="#">"Скачки"</a></p>
+                   </div> 
+                       <div class="line"></div>
+                          <div class="mt20"></div>
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+            </div>
+            
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_3" src="image/lentahand.png" alt="новый вызов">
+                  <!-- <img class="l_i_4" src="image/lentashit.png" alt="новый вызов"> -->
+                  <canvas class="l_i_4" width="130px" height="130px" id="herb1">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "1";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb();
+                  </script>   
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Вы бросили вызов: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Руку при запуске проекта несколько вариантов lorem ipsum. Основе оригинального трактата, благодаря чему появляется возможность получить более. Применили в длине наиболее распространенных слов. Он веб-дизайнерами для вставки на кириллический контент – написание символов на сайтах. Кроме того, есть специальные генераторы, создающие собственные варианты текста сыграет на руку. Сей день существует несколько вариантов lorem отсюда напрашивается вывод, что такое текст-рыба. С языками, использующими латинский алфавит. Генераторы, создающие собственные варианты текста сыграет на. Иные буквы встречаются с разной частотой. И по сей день философу цицерону, ведь именно. Качества восприятия макета буквы встречаются с языками, использующими латинский алфавит. Проблемы: в длине наиболее распространенных слов к обитателям водоемов древнеримскому философу.</p>
+                   </div> 
+                       <div class="line"></div>
+                       <div class="mt20"></div>
+                <div class="mt20"></div>
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+            </div>
+            
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_5" src="image/lentacup.png" alt="новый вызов">
+                  <!--<img class="l_i_6" src="image/lentashit.png" alt="новый вызов">-->
+                  <canvas class="l_i_4" width="130px" height="130px" id="herb1">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "1";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb();
+                  </script>     
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Вы бросили вызов: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Проверьте и прокомментируйте <a href="#" class="linkNew">Подвиг</a>, помогите участнику стать настоящим героем!</p>
+                       <p class="lenta_text">Проверьте и прокомментируйте <a href="#" class="linkNew">Подвиг</a>, помогите участнику стать настоящим героем!</p>
+                       <p class="lenta_text">Руку при запуске проекта несколько вариантов lorem ipsum. Основе оригинального трактата, благодаря чему появляется возможность получить более. Применили в длине наиболее распространенных слов. Он веб-дизайнерами для вставки на кириллический контент – написание символов на сайтах. Кроме того, есть специальные генераторы, создающие собственные варианты текста сыграет на руку. Сей день существует несколько вариантов lorem отсюда напрашивается вывод, что такое текст-рыба. С языками, использующими латинский алфавит. Генераторы, создающие собственные варианты текста сыграет на. Иные буквы встречаются с разной частотой. И по сей день философу цицерону, ведь именно. Качества восприятия макета буквы встречаются с языками, использующими латинский алфавит. Проблемы: в длине наиболее распространенных слов к обитателям водоемов древнеримскому философу.</p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                          <div class="voc_ne"><img src="image/Learn3.png" alt="lenta" class="voc_im">Зачинщик: <a href="#" class="linkNew">Елена Локтева</a></div>
+                           <div class="voc_ne2"><img src="image/komment.png" alt="lenta" class="voc_im">Комментариев: <a href="#" class="linkNew">5</a></div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_7" src="image/lentamytourn.png" alt="новый вызов">
+                  <img class="l_i_8" src="image/min_tourn1.png" alt="новый вызов">    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Вы бросили вызов: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                          <div class="voc_ne"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий защитников: 24</div>
+                           <div class="voc_ne2"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий судей: 3</div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_2" src="image/lentalabel.png" alt="новый вызов">    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_levUp">Новый уровень!</p>
+                       <p class="lenta_name">Ваша доблесть <span class="fWB">Великодушее</span> вышла на <span class="fWB">2 &minus; й </span> уровень</p>
+                       <p class="lenta_date">12.09.18</p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                          <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_5_z1" src="image/lentawhitekn.png" alt="новый вызов">
+                  <img class="l_i_6" src="image/lentashit.png" alt="новый вызов">    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Совершён подвиг по вашему вызову <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Проверьте и прокомментируйте <a href="#" class="linkNew">Подвиг</a>, помогите участнику стать настоящим героем!</p>
+                   </div> 
+                       <div class="line"></div>
+                         <div class="mt20"></div>
+                          <div class="voc_ne"><img src="image/Learn3.png" alt="lenta" class="voc_im">Герой: <a href="#" class="linkNew">Елена Локтева</a></div>
+                           <div class="voc_ne2"><img src="image/komment.png" alt="lenta" class="voc_im">Комментариев: <a href="#" class="linkNew">5</a></div>
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_1" src="image/newvyzbl.png" alt="новый вызов">
+                  <img class="l_i_3" src="image/lentahand.png" alt="новый вызов">
+                  <img class="l_i_9" src="image/lentashitmini.png" alt="новый вызов">    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Пользователь <a class="linkNew" href="#">Логин зачинщика</a>, на которого вы подписаны, создал вызов. Тип <a class="linkNew" href="#">"Просмотреть"</a></p>
+                   </div> 
+                       <div class="line"></div>
+                          <div class="mt20"></div>
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_1" src="image/newtournor.png" alt="новый турнир">
+                  <img class="l_i_2" src="image/lentakop.png" alt="новый турнир">  
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">По категории <a class="linkNew" href="#">Название_категории</a>, на которую вы подписаны, <a class="linkNew" href="#">Логин_зачинщика</a> бросил вызов. Тип <a class="linkNew" href="#">"Скачки"</a></p>
+                   </div> 
+                       <div class="line"></div>
+                          <div class="mt20"></div>
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_2" src="image/lentalevup.png" alt="новый вызов">    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_levUp">Новый титул!</p>
+                       <p class="lenta_name">Поздравляем! Вы получили новый титул <span class="fWB">Оруженосец! </span></p>
+                       <p class="lenta_date">12.09.18</p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                          <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_7" src="image/lentamytourngreen.png" alt="новый вызов">
+                  <img class="l_i_10" src="image/min_tourn21.png" alt="новый вызов">
+                      <div class="lentaimg_title">Сформирован</div>    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">На ваш турнир <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a> закрыты все вакансии</p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Вы можете перевести турнир в статус “Проводится”</p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                          <div class="voc_ne"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий защитников: 24</div>
+                           <div class="voc_ne2"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий судей: 3</div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_7" src="image/lentatournbl.png" alt="новый вызов">
+                  <img class="l_i_10" src="image/lentahorse.png" alt="новый вызов">
+                      <div class="lentaimg_title">Стартовал</div>    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Стартовал турнир, в котором вы участвуете: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Вы можете приступить к выполнению подвигов по вызовам турнира!</p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_1" src="image/lentatournbl1.png" alt="новый вызов">
+                  <img class="l_i_2" src="image/lentahorse.png" alt="новый вызов">
+                      <div class="lentaimg_title">Стартовал</div>    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Стартовал турнир, который вы судите: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Для проверки подвигов перейдите в раздел турнира <a href="#" class="linkNew">&ldquo;Статистика &#62; Вызовы&rdquo;</a></p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_7" src="image/lentamytourn.png" alt="новый вызов">
+                  <img class="l_i_11" src="image/lentakn.png" alt="новый вызов">
+                      <div class="lentaimg_title">Завершен</div>    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Турнир, который вы объявили, завершён: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Объявите Победителя! </p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                           <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            <div class="lentaNews_1">
+               <div class="lentaimg">
+                  <img class="l_i_7" src="image/lentatourngr.png" alt="новый вызов">
+                  <img class="l_i_11" src="image/lentakn.png" alt="новый вызов">
+                      <div class="lentaimg_title">Завершен</div>    
+               </div>                  
+                   <div class="lentabody">
+                       <p class="lenta_name">Турнир, который вы объявили, завершён: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
+                       <p class="lenta_date">12.09.18</p>
+                       <p class="lenta_text">Просмотрите свои результаты. </p>
+                   </div> 
+                       <div class="line"></div>
+                        <div class="mt20"></div>
+                         <div>
+                           <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">В статистику</a></div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                         </div>            
+            </div>
+            
+        </div>
+        
+                     
+               </div>            
+          </div>
+          <div class="footUp">
+             <p><span id="footUpText">Расскажи друзьям: &nbsp;</span></p>
+                 <script type="text/javascript">(function() {
+                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                  }})();
+                </script>
+                <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,linkedin"></div>
+         </div>
+       </div>   
+   </div>
+   <div class="footer">     
+         <div class="footDown">
+             <div class="footDown1">
+                 <div class="footDown1_1">
+                     <p><a href="#">Политика конфеденциальности</a></p>
+                     <p><a href="#">Пользовательское соглашение</a></p>
+                 </div>
+                 <div class="footDown1_2">
+                     <p>admin@skillplus.me</p>
+                     <p><a href="cancelaria.html">Канцелярия</a></p>
+                 </div>
+                 <div class="footDown1_3">
+                     <p>&copy; 2018 SkillPlus.Me</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+    
+     
+</body>
+</html>
