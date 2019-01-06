@@ -11,13 +11,19 @@
     </script>
     <link href="css/magicsuggest-min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/zero.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"> 
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="js/magicsuggest-min.js"></script>
-    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
     <script src="js/scripts.js"></script>
-    
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
     
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
@@ -68,36 +74,30 @@
                <a class="viewPodvigHref" href="vyzovy2.html">Добавить вызов</a>
                <form action='#' id="creatVyz">
                 <div class="contVyzUp">
-                <div class="attention"><img src="image/Attention.png" alt="Внимание"> Внимание вы забыли заполнить некоторые важные поля
-                </div>
                 <div class="nameVyz"> 
                       Название вызова<span class="colRed">*</span> <input type='text' name='title' class='text'>
                 </div>
-                <div class="typeVyz"> 
-                   
-                      Тип вызова<span class="colRed">*</span> <span class="quest"><img src="image/vopros.png" alt="подсказка"><span class="hint">Подсказки в качестве пояснения к полям &#40;при необходимости&#41;</span></span>
-                       <select name='TypeId' id="selectType" required>
-                            <option value=''>Выберите...</option>
-                            <option value=1>тип 1</option>
-                            <option value=2>тип 2</option>
-                            <option value=3>тип 3</option>
-                       </select>
-                   
-                </div>
-                <!--<div class="dostupn">
-                       <span class='dostupn1'>Доступно</span> <img src="image/vopros.png" alt="подсказка">
-                           <input type='radio' name='date' value=1 checked>
-                           <span id="dossp">Всегда</span>
-                           <input type='radio' name='date' value=2 >
-                           с <input class="dostupn2" type=date> по <input class="dostupn2" type=date>
-               </div>-->
+                
                 <div class="categor">
                     <span class="catZag">Категории<span class="colRed">*</span> </span><img src="image/vopros.png" alt="подсказка">
-                     
                       <div class="catnew">
-                       <div id="magicsuggest"></div>
-                      </div> 
-                         
+                           <div id="magicsuggest"></div>
+                      </div>    
+                </div>
+                
+                <div class="listAutor">  
+                      <div class="listAutor1">Краткое описание<span class="colRed">*</span></div><img src="image/vopros.png" alt="подсказка">
+                    
+                       <textarea name="enterAut" id="krop" onkeyup="stat()" maxlength="200"></textarea>
+                       <div class="listAutor11">Для описания вызова у вас осталось <span id="krop1">200</span> символов</div>
+                       <script>
+                           function stat(){
+                              var s, c;
+                              s =  krop.value;  
+                              c = 200 - s. length;  
+                              krop1.innerHTML = c;
+                           }
+                       </script>
                 </div>
                 
                </div>
@@ -110,42 +110,62 @@
                        
                    </script>
                </div>
-               <div class="link_to_video">
-                   <div class="link_to_video1">Ссылка на видео</div>
-                   <img src="image/vopros.png" alt="подсказка">
-                   <input type='text' name='title' class='text' placeholder="https://">
+               <div class="vyzMediaObj">
+                   <div class="vyzMediaObj1">
+                      <button id="showMeda1"> Добавить медиа-обьект</button>
+                      <img src="image/notification7.png" alt="закрыть" id="hideMeda1">
+                   </div>
+                       <div id="contMedia1" class="dn">
+                               <div class="vyzMediaObj1_1">
+                                 <input type='text' name='title' class='text' placeholder="<iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/uwk9KEPcovU&quot; frameborder=&quot;0&quot; allow=&quot;ac">
+                                 <div class="vyzMediaObj1_11">Инструкция о том, как и что надо вставлять в появившееся поле</div>  
+                               </div>
+                       </div>
+                   <div class="vyzMediaObj2">
+                      <button id="showMeda2"> Добавить медиа-обьект</button>
+                      <img src="image/notification7.png" alt="закрыть" id="hideMeda2">
+                   </div>
+                       <div id="contMedia2" class="dn">
+                               <div class="vyzMediaObj2_1">
+                                 <p>Заголовок поля</p>
+                                 <input type='text' name='title' class='text'>
+                                 <p>Заголовок поля</p>
+                                 <input type='text' name='title' class='text'>
+                               </div>
+                       </div>
                </div>
-               <div class="name_meet">
-                   <div class="name_meet1">Название мероприятия</div>
-                   <img src="image/vopros.png" alt="подсказка">
-                   <input type='text' name='title' class='text'>
-               </div>
-               <div class="location">
-                   <div class="location1">Место проведения</div>
-                   <img src="image/vopros.png" alt="подсказка">
-                   <input type='text' name='title' class='text' placeholder="место">
-               </div>
+               
+               <div class="listAutor">  
+                      <div class="listAutor1">Сложность вызова<span class="colRed">*</span></div><span class="quest">
+                        <img src="image/vopros.png" alt="подсказка">
+                        <span class="hint11">Выберите сложность вызова</span>
+                    </span>
+                    
+                      <input type="radio" class="radio33" id="selectDif1" name="vyzsel" value="1" checked>
+                      <label for="selectDif1"></label>
+                      <input type="radio" class="radio34" id="selectDif2" name="vyzsel" value="2">
+                      <label for="selectDif2"></label>
+                      <input type="radio" class="radio35" id="selectDif3" name="vyzsel" value="3">
+                      <label for="selectDif3"></label>
+                      <div class="listAutor11">При подсчете баллов учитывается коэффициент сложности - 1, 2 или 3.</div>
+                </div>
+               
                <div class="time">
                   <div class="time_name">
-                      Время проведения
+                      Время проведения<span class="colRed">*</span>
                   </div>
                    <div class="time_start">
                        
-                         старт <input class="dostupn2" type=date>  <input class="time_start2" type=time>
+                         старт <input class="dostupn2" type='datetime-local'> 
                        
                    </div>
                    <div class="time_finish">
                        
-                         финиш <input class="dostupn2" type=date>  <input class="time_start2" type=time>
+                         финиш <input class="dostupn2" type='datetime-local'> 
                        
                    </div>
                </div>
-               <div class="listAutor">  
-                      <div class="listAutor1">Перечислите организаторов </div><img src="image/vopros.png" alt="подсказка">
-                    
-                       <textarea name="enterAut"></textarea>
-                    
-                </div>
+              
                <div class="answr">
                        <div class="answ0">Что принимать в качестве ответа<br> на вызов?</div>
                        <img src="image/vopros.png" alt="подсказка">

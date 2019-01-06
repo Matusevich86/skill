@@ -74,25 +74,25 @@
                </div>
                
                <div class="instruc">
-                   <div class="instruc2">Описание турнира</div>
-                   <img src="image/vopros.png" alt="подсказка">
+                   <div class="instruc2">Описание турнира<span class="colRed">*</span></div>
+                   <span class="quest"><img src="image/vopros.png" alt="подсказка" class="mbminus5"><span class="hint">Укажите цели и задачи турнира, условия участия и другую необходимую информацию.</span></span>
                    <textarea name="instructin"></textarea>
                    <script>
                         CKEDITOR.replace( 'instructin' );
                    </script>
                </div>
                
-               <div class="tourn_pod">
-                 Укажите цели и задачи турнира, условия участия и другую необходимую информацию. 
-               </div>
                
                <div class="categor">
-                    <span class="catZag">Категории&nbsp;&nbsp; </span><img src="image/vopros.png" alt="подсказка"> 
+                   <span class="catZag">Категории<span class="colRed">*</span>&nbsp; </span>
+                     <span class="quest"><img src="image/vopros.png" alt="подсказка" class="mbminus5">
+                     <span class="hint">Введите тематические категории</span>
+                     </span> 
                       <div class="catnew">
-                       <div id="magicsuggest"></div>
+                       <div id="magicsuggest6"></div>
                       </div>     
                 </div>
-                
+                  
                <div class="tourn_type_cnt">
                    <div class="instruc2">Тип турнира &nbsp;&nbsp;</div><img src="image/vopros.png" alt="подсказка">
                </div>
@@ -129,43 +129,45 @@
                                     </div>
                             </div>
                             
-                    </div>
+                    </div> 
                     
                     <div class="categor">
-                        <span class="catZag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Авторы&nbsp; </span><img src="image/vopros.png" alt="подсказка"> 
+                        <div class="tourn_z2">Пригласить судей </div>
+                         <span class="quest"><img src="image/vopros.png" alt="подсказка" class="mbminus5">
+                         <span class="hint">Пригласите пользователей судить ваш турнир</span>
+                         </span> 
                           <div class="catnew">
-                           <div id="magicsuggest3"></div>
+                           <div id="magicsuggest5"></div>
                           </div>     
                     </div>
                     
-                    <div class="tourn_pod">
-                        Введите e-mail или логин судей через запятую для рассылки им приглашений.
-                    </div>
-                    
               <div class="tourn_z">
-                   <div class="tourn_z1">Количество судий</div>
-                   <img src="image/vopros.png" alt="подсказка" class="mb_3">
+                   <div class="tourn_z1">Количество судей</div>
+                   <span class="quest"><img src="image/vopros.png" alt="подсказка">
+                   <span class="hint">Максимальное количество вакансий для судей</span>
+                   </span>
                    <input type='text' name='title' class='text' placeholder="5">
                </div>
                
                <div class="tourn_z">
-                   <div class="tourn_z1">Количество защитников</div>
-                   <img src="image/vopros.png" alt="подсказка" class="mb_3">
+                   <div class="tourn_z1">Количество защитников<span class="colRed">*</span></div>
+                   <span class="quest"><img src="image/vopros.png" alt="подсказка">
+                   <span class="hint">Максимальное количество вакансий для защитников</span>
+                   </span>
                    <input type='text' name='title' class='text' placeholder="24">
                </div>
                
                <div class="instruc">
-                   <div class="instruc2">Трофей</div>
-                   <img src="image/vopros.png" alt="подсказка">
+                   <div class="instruc2">Трофей<span class="colRed">*</span> &nbsp;</div>
+                   <span class="quest"><img src="image/vopros.png" alt="подсказка">
+                   <span class="hint">Укажите, какой приз получит победитель турнира.</span>
+                   </span>
                    <textarea name="instructin1"></textarea>
                    <script>
                         CKEDITOR.replace( 'instructin1' );
                    </script>
                </div>
                
-               <div class="tourn_pod">
-                        Укажите, какой приз получит победитель турнира.
-                    </div>
                
               <div class="saveVyz">
                         <span><input type="submit" class="saveVyzBut8" value="Сохранить турнир"/></span>

@@ -22,6 +22,9 @@
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/jquery.jscrollpane.js"></script>
     <script src="js/jquery.scrollbar.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
     
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
@@ -41,13 +44,13 @@
            <a href="#"><img src="image/vyhod.png" alt="Выход"><div>&nbsp;&nbsp;Выход</div></a>
        </div>
        <div class="notification">
-           <img src="image/notification10.png" alt="Уведомления" id="showNotif">
-                       
+           <img src="image/notification10.png" alt="Уведомления" id="showNotif" class="swing" data-wow-iteration="15">
+                <span class="notifSum"></span>       
                         <div class="notification_1" id="contNotif">
-                        <div class="hostik"></div>
+                        
                          <img src="image/notification7.png" alt="закрыть" class="hideNocif" id="hideNotification">
                           <div class="scrollbar-chrome">
-                           
+                         
                             <a href="#" class="linkNotification">
                                <div class="notification_2">
                                 <div class="notifimg"><img src="image/notification2.png" alt="картинка"></div>
@@ -67,7 +70,7 @@
                                     <div>Оставлено 5 ответов на ваш комментарий <span class="fWB">“Содержание комментария (в одну строку)...”</span></div>
                                 </div>
                             </a>
-                             
+                   
                             <a href="#" class="linkNotification">
                                 <div class="notification_2">
                                     <div class="notifimg"><img src="image/notification4.png" alt="картинка"></div>
@@ -88,7 +91,7 @@
                                     <div>На ваш турнир подал заявку Судья <span class="fWB">“Логин пользователя”</span></div>
                                 </div>
                             </a>
-                            
+                                
                             <a href="#" class="linkNotification">
                                 <div class="notification_3">
                                     <div class="notifimg"><img src="image/notification5.png" alt="картинка"></div>
@@ -109,7 +112,7 @@
                                     <div>Отклонена ваша заявка на вакансию Защитника в турнире <span class="fWB">“Название турнира...”</span></div>
                                 </div>
                             </a>
-                            
+                   
                             <a href="#" class="linkNotification">
                                 <div class="notification_3">
                                     <div class="notifimg"><img src="image/notification5.png" alt="картинка"></div>
@@ -179,10 +182,13 @@
                                     <div>Отклонён ваш ответ на задание в турнире <span class="fWB">“Название турнира...”</span></div>
                                 </div>
                             </a>
-                            
+                           
                           </div>    
                         </div>
-                        
+        <script>
+            var count = $('.linkNotification').size();
+            $(".notifSum").text(count);
+        </script>               
                        
        </div>
        <div class="search">
@@ -218,6 +224,10 @@
                <a class="detalyVuzHrefNA" href="progtournCastle12.html">Настройки</a> 
                     
         <div class="rightCol">
+         <div class='right_col_but'>
+             <input type="submit" class="saveVyzBut17" value="Бросить вызов"/>
+             <input type="submit" class="saveVyzBut17" value="Добавить турнир"/>
+         </div>
            <div class="right_col_body">
             <p class="right_col_name">Рекомендации</p>
                 <div class="right_col_text">
@@ -259,6 +269,7 @@
         
         
         <div class="leftCol">
+           
             <div class="lentaNews">
                <div class="lentaimg">
                   <img class="l_i_1" src="image/newvyzbl.png" alt="новый вызов">
@@ -268,10 +279,12 @@
                        <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">По категории <a class="linkNew" href="#">Название_категории</a>, на которую вы подписаны, <a class="linkNew" href="#">Логин_зачинщика</a> бросил вызов. Тип <a class="linkNew" href="#">"Просмотреть"</a></p>
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                              <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                       </div>
                    </div> 
-                       <div class="line"></div>
-                          <div class="mt20"></div>
-                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>             
+                                         
             </div>
             
             <div class="lentaNews">
@@ -283,47 +296,51 @@
                        <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">По категории <a class="linkNew" href="#">Название_категории</a>, на которую вы подписаны, <a class="linkNew" href="#">Логин_зачинщика</a> бросил вызов. Тип <a class="linkNew" href="#">"Скачки"</a></p>
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                              <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                       </div>
                    </div> 
-                       <div class="line"></div>
-                          <div class="mt20"></div>
-                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+                                   
             </div>
             
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_3" src="image/lentahand.png" alt="новый вызов">
-                  <!-- <img class="l_i_4" src="image/lentashit.png" alt="новый вызов"> -->
-                  <canvas class="l_i_4" width="130px" height="130px" id="herb1">Обновите ваш браузер</canvas>
+                  <canvas class="l_i_4" width="130px" height="130px" id="herb6">Обновите ваш браузер</canvas>
                   <script>
                       var herbShape = "3";
-                      var herbGrad = "1";
+                      var herbGrad = "3";
                       var herbColor1 = "#e4e4e4"; 
                       var herbColor2 = "#424242";
-                      drawHerb();
+                      drawHerb('herb6');
                   </script>   
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name">Вы бросили вызов: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Руку при запуске проекта несколько вариантов lorem ipsum. Основе оригинального трактата, благодаря чему появляется возможность получить более. Применили в длине наиболее распространенных слов. Он веб-дизайнерами для вставки на кириллический контент – написание символов на сайтах. Кроме того, есть специальные генераторы, создающие собственные варианты текста сыграет на руку. Сей день существует несколько вариантов lorem отсюда напрашивается вывод, что такое текст-рыба. С языками, использующими латинский алфавит. Генераторы, создающие собственные варианты текста сыграет на. Иные буквы встречаются с разной частотой. И по сей день философу цицерону, ведь именно. Качества восприятия макета буквы встречаются с языками, использующими латинский алфавит. Проблемы: в длине наиболее распространенных слов к обитателям водоемов древнеримскому философу.</p>
-                   </div> 
-                       <div class="line"></div>
                        <div class="mt20"></div>
-                <div class="mt20"></div>
-                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                              <div class="voc_ne">Оценка <img src="image/star3.png" alt="сложность" class="mb-6"></div>
+                              <div class="voc_ne2">Подвигов по взову <a href="#" class="linkNew">1</a></div>
+                              <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                       </div>
+                   </div> 
+                                         
             </div>
             
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_5" src="image/lentacup.png" alt="новый вызов">
-                  <!--<img class="l_i_6" src="image/lentashit.png" alt="новый вызов">-->
-                  <canvas class="l_i_4" width="130px" height="130px" id="herb1">Обновите ваш браузер</canvas>
+                  <canvas class="l_i_16" width="130px" height="130px" id="herb2">Обновите ваш браузер</canvas>
                   <script>
                       var herbShape = "3";
                       var herbGrad = "1";
                       var herbColor1 = "#e4e4e4"; 
                       var herbColor2 = "#424242";
-                      drawHerb();
+                      drawHerb('herb2');
                   </script>     
                </div>                  
                    <div class="lentabody">
@@ -332,14 +349,14 @@
                        <p class="lenta_text">Проверьте и прокомментируйте <a href="#" class="linkNew">Подвиг</a>, помогите участнику стать настоящим героем!</p>
                        <p class="lenta_text">Проверьте и прокомментируйте <a href="#" class="linkNew">Подвиг</a>, помогите участнику стать настоящим героем!</p>
                        <p class="lenta_text">Руку при запуске проекта несколько вариантов lorem ipsum. Основе оригинального трактата, благодаря чему появляется возможность получить более. Применили в длине наиболее распространенных слов. Он веб-дизайнерами для вставки на кириллический контент – написание символов на сайтах. Кроме того, есть специальные генераторы, создающие собственные варианты текста сыграет на руку. Сей день существует несколько вариантов lorem отсюда напрашивается вывод, что такое текст-рыба. С языками, использующими латинский алфавит. Генераторы, создающие собственные варианты текста сыграет на. Иные буквы встречаются с разной частотой. И по сей день философу цицерону, ведь именно. Качества восприятия макета буквы встречаются с языками, использующими латинский алфавит. Проблемы: в длине наиболее распространенных слов к обитателям водоемов древнеримскому философу.</p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
-                          <div class="voc_ne"><img src="image/Learn3.png" alt="lenta" class="voc_im">Зачинщик: <a href="#" class="linkNew">Елена Локтева</a></div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
+                           <div class="voc_ne"><img src="image/Learn3.png" alt="lenta" class="voc_im">Зачинщик: <a href="#" class="linkNew">Елена Локтева</a></div>
                            <div class="voc_ne2"><img src="image/komment.png" alt="lenta" class="voc_im">Комментариев: <a href="#" class="linkNew">5</a></div>
-                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                        </div>
+                   </div> 
+                                   
             </div>
             
             <div class="lentaNews_1">
@@ -350,14 +367,14 @@
                    <div class="lentabody">
                        <p class="lenta_name">Вы бросили вызов: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                            <div class="voc_ne"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий защитников: 24</div>
+                            <div class="voc_ne2"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий судей: 3</div>
+                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div> 
+                        </div>
                    </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
-                          <div class="voc_ne"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий защитников: 24</div>
-                           <div class="voc_ne2"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий судей: 3</div>
-                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                                  
             </div>
             
             <div class="lentaNews_1">
@@ -368,58 +385,87 @@
                        <p class="lenta_levUp">Новый уровень!</p>
                        <p class="lenta_name">Ваша доблесть <span class="fWB">Великодушее</span> вышла на <span class="fWB">2 &minus; й </span> уровень</p>
                        <p class="lenta_date">12.09.18</p>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
+                              <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
+                              <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                        </div> 
                    </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
-                          <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
-                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                                  
             </div>
             <div class="lentaNews_1">
                <div class="lentaimg">
-                  <img class="l_i_5_z1" src="image/lentawhitekn.png" alt="новый вызов">
-                  <img class="l_i_6" src="image/lentashit.png" alt="новый вызов">    
+                  <img class="l_i_5_z1" src="image/lentawhitekn.png" alt="новый вызов"> 
+                  <canvas class="l_i_6" width="130px" height="130px" id="herb3">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "3";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb('herb3');
+                  </script>      
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name">Совершён подвиг по вашему вызову <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Проверьте и прокомментируйте <a href="#" class="linkNew">Подвиг</a>, помогите участнику стать настоящим героем!</p>
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                               <div class="voc_ne"><img src="image/Learn3.png" alt="lenta" class="voc_im">Герой: <a href="#" class="linkNew">Елена Локтева</a></div>
+                               <div class="voc_ne2"><img src="image/komment.png" alt="lenta" class="voc_im">Комментариев: <a href="#" class="linkNew">5</a></div>
+                               <div class="lenta_del_link"><a href="#">Скрыть новость</a></div> 
+                        </div> 
                    </div> 
-                       <div class="line"></div>
-                         <div class="mt20"></div>
-                          <div class="voc_ne"><img src="image/Learn3.png" alt="lenta" class="voc_im">Герой: <a href="#" class="linkNew">Елена Локтева</a></div>
-                           <div class="voc_ne2"><img src="image/komment.png" alt="lenta" class="voc_im">Комментариев: <a href="#" class="linkNew">5</a></div>
-                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+                                        
             </div>
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_1" src="image/newvyzbl.png" alt="новый вызов">
-                  <img class="l_i_3" src="image/lentahand.png" alt="новый вызов">
-                  <img class="l_i_9" src="image/lentashitmini.png" alt="новый вызов">    
+                  <img class="l_i_2" src="image/lentahand.png" alt="новый вызов">
+                  <canvas class="l_i_9" width="130px" height="130px" id="herb4">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "3";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb('herb4');
+                  </script>   
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Пользователь <a class="linkNew" href="#">Логин зачинщика</a>, на которого вы подписаны, создал вызов. Тип <a class="linkNew" href="#">"Просмотреть"</a></p>
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                              <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                       </div>
                    </div> 
-                       <div class="line"></div>
-                          <div class="mt20"></div>
-                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+                                          
             </div>
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_1" src="image/newtournor.png" alt="новый турнир">
-                  <img class="l_i_2" src="image/lentakop.png" alt="новый турнир">  
+                  <img class="l_i_2" src="image/lentakop.png" alt="новый турнир">
+                  <canvas class="l_i_17" width="130px" height="130px" id="herb8">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "3";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb('herb8');
+                  </script>    
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name"><a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">По категории <a class="linkNew" href="#">Название_категории</a>, на которую вы подписаны, <a class="linkNew" href="#">Логин_зачинщика</a> бросил вызов. Тип <a class="linkNew" href="#">"Скачки"</a></p>
+                       <div class="mt20"></div>
+                       <div class=" lentaNewsF">
+                              <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                       </div>
                    </div> 
-                       <div class="line"></div>
-                          <div class="mt20"></div>
-                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>            
+                       
+                                       
             </div>
             <div class="lentaNews_1">
                <div class="lentaimg">
@@ -429,67 +475,75 @@
                        <p class="lenta_levUp">Новый титул!</p>
                        <p class="lenta_name">Поздравляем! Вы получили новый титул <span class="fWB">Оруженосец! </span></p>
                        <p class="lenta_date">12.09.18</p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
                           <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
                             <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                       </div>
+                   </div>                     
             </div>
+            
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_7" src="image/lentamytourngreen.png" alt="новый вызов">
                   <img class="l_i_10" src="image/min_tourn21.png" alt="новый вызов">
-                      <div class="lentaimg_title">Сформирован</div>    
+                  <div class="lentaimg_title">Сформирован</div>    
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name">На ваш турнир <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a> закрыты все вакансии</p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Вы можете перевести турнир в статус “Проводится”</p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
-                          <div class="voc_ne"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий защитников: 24</div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
+                           <div class="voc_ne"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий защитников: 24</div>
                            <div class="voc_ne2"><img src="image/tourn_23.png" alt="lenta" class="voc_im">Вакансий судей: 3</div>
-                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                        </div>
+                   </div>                  
             </div>
+            
             <div class="lentaNews_1">
                <div class="lentaimg">
-                  <img class="l_i_7" src="image/lentatournbl.png" alt="новый вызов">
-                  <img class="l_i_10" src="image/lentahorse.png" alt="новый вызов">
+                  <img class="l_i_14" src="image/tourn_canbl.png" alt="новый вызов">
+                  <canvas class="l_i_12" width="130px" height="130px" id="herb5">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "3";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb('herb5');
+                  </script> 
+                  <img class="l_i_13" src="image/lentahorse.png" alt="новый вызов">
                       <div class="lentaimg_title">Стартовал</div>    
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name">Стартовал турнир, в котором вы участвуете: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Вы можете приступить к выполнению подвигов по вызовам турнира!</p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
                             <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                        </div>
+                   </div>                
             </div>
+            
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_1" src="image/lentatournbl1.png" alt="новый вызов">
                   <img class="l_i_2" src="image/lentahorse.png" alt="новый вызов">
-                      <div class="lentaimg_title">Стартовал</div>    
+                  <div class="lentaimg_title">Стартовал</div>    
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name">Стартовал турнир, который вы судите: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Для проверки подвигов перейдите в раздел турнира <a href="#" class="linkNew">&ldquo;Статистика &#62; Вызовы&rdquo;</a></p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
                             <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                       </div> 
+                   </div>                    
             </div>
+            
             <div class="lentaNews_1">
                <div class="lentaimg">
                   <img class="l_i_7" src="image/lentamytourn.png" alt="новый вызов">
@@ -500,33 +554,39 @@
                        <p class="lenta_name">Турнир, который вы объявили, завершён: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Объявите Победителя! </p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
                            <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">К достижениям</a></div>
-                            <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
+                           <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
+                        </div>
+                   </div>               
             </div>
+            
             <div class="lentaNews_1">
                <div class="lentaimg">
-                  <img class="l_i_7" src="image/lentatourngr.png" alt="новый вызов">
-                  <img class="l_i_11" src="image/lentakn.png" alt="новый вызов">
+                  <img class="l_i_14" src="image/tourn_cangr.png" alt="новый вызов">
+                  <canvas class="l_i_12" width="130px" height="130px" id="herb7">Обновите ваш браузер</canvas>
+                  <script>
+                      var herbShape = "3";
+                      var herbGrad = "3";
+                      var herbColor1 = "#e4e4e4"; 
+                      var herbColor2 = "#424242";
+                      drawHerb('herb7');
+                  </script> 
+                  <img class="l_i_15" src="image/lentakn.png" alt="новый вызов">
                       <div class="lentaimg_title">Завершен</div>    
                </div>                  
                    <div class="lentabody">
                        <p class="lenta_name">Турнир, который вы объявили, завершён: <a class="linkNewBold" href="#">Название вызова (наверно, надо ограничивать видимое количество знаков?)</a></p>
                        <p class="lenta_date">12.09.18</p>
                        <p class="lenta_text">Просмотрите свои результаты. </p>
-                   </div> 
-                       <div class="line"></div>
-                        <div class="mt20"></div>
-                         <div>
+                       <div class="mt20"></div>
+                       <div class="lentaNewsF">
                            <div class="voc_ne"><img src="image/lentarow.png" alt="lenta" class="voc_im"><a href="#" class="linkNew">В статистику</a></div>
                             <div class="lenta_del_link"><a href="#">Скрыть новость</a></div>
-                         </div>            
-            </div>
-            
+                        </div>
+                   </div>                    
+             </div>
         </div>
         
                      

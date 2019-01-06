@@ -12,14 +12,19 @@
     <link href="css/magicsuggest-min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/zero.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-    <!--<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"> 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="js/magicsuggest-min.js"></script>
-    <script src="js/scripts.js"></script>
     <script src="ckeditor/ckeditor.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
     <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/scripts.js"></script>
+   
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="SkillPlus.Me"/>
@@ -69,14 +74,21 @@
                <a class="viewPodvigHref" href="mycastle.html">Регистрация</a>
               <div class="reginput">
                 <form action="#" class="form" id="formRegistration">
-                    <label>Рыцарское имя<br> (логин)<span class="colRed">*</span>:</label><input type="text" name="login" class="regin" id="login" /><br>
-                    <label>Введите пароль<span class="colRed">*</span>:</label><input type="password" name="password" id="Password" class="regin" required /><br>
+                    <label>Рыцарское имя<br> (логин)<span class="colRed">*</span>:</label><input type="text" name="login" class="regin" id="login" />
+                    <br>
+                    <label>Введите пароль<span class="colRed">*</span>:</label><input type="password" name="password" id="password" class="regin" required />
+                    <br>
                     <label>Повторите пароль<span class="colRed">*</span>:</label><input type="password" name="password2" id="ConfirmPassword" class="regin" required /><br>
-                    <label>e&#45;mail<span class="colRed">*</span>:</label><input type="email" name="email" class="regin" id="email"/>&nbsp;&nbsp;<input type="checkbox" name="vidno" class="vidnoEmail"> Видно всем<br>
-                    <label>Имя:</label><input type="text" name="name" class="regin" id="name" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем <br>
-                    <label>Фамилия:</label><input type="text" name="surname" class="regin" id="surname" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
-                    <label>Дата рождения:</label><input type="date" class="regin" id="regdate" name="date">&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
-                    <label>Страна:</label><input type="text" name="name" class="regin" id='country'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
+                    <label>e&#45;mail<span class="colRed">*</span>:</label><input type="email" name="email" class="regin" id="email"/>&nbsp;&nbsp;<input type="checkbox" name="vidno" class="vidnoEmail"> Видно всем
+                    <br>
+                    <label>Имя:</label><input type="text" name="name" class="regin" id="name" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем 
+                    <br>
+                    <label>Фамилия:</label><input type="text" name="surname" class="regin" id="surname" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                    <br>
+                    <label>Дата рождения:</label><input type="date" class="regin" id="regdate" name="date">&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                    <br>
+                    <label>Страна:</label><input type="text" name="name" class="regin" id='country'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                    <br>
                     <label>Город:</label><input type="text" name="name" class="regin" id='sity'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
                       
                        <div class="categor1">
@@ -92,15 +104,31 @@
                                <div id="magicsuggest2"></div>
                               </div> 
                         </div>
+                        
+                        <div class="gsm-reg mt10">
+                           
+                            <label>Ваш телефон<span class="colRed">*</span>:</label><select id="gsm_country" class="form-control gsm-regin">
+                              <option value="by"><img src="">Беларусь +375</option>
+                              <option value="kz">Казахстан +7</option>
+                              <option value="ru">Россия +7</option>
+                              <option value="ua">Украина +380</option>  
+                            </select>
+                            <input type="text" class="regin" id='gsmphone' name='gsmphone' placeholder='№ телефона'/>
+                            <div class="buttSMS"><a href="#" id="getCode"><p class="butSMSP">Получить код по SMS</p></a></div>
+                                
+                        </div>
+                        <div class="gsm-reg">
+                            <label>Введите код<span class="colRed">*</span>:</label><input type="text" name="gsmreg" class="regin" id='gsmreg'/> 
+                        </div>
                        
-                        <div class="entersoglasie">
+                        <div class="regsoglasie">
                               
                                   <input type='checkbox' name='comment'>
                             
                                   <div class="soglasieText">Я подтверждаю, что ознакомлен с <a href="#" class="linkall">политикой конфиденциальности</a> и <a href="#" class="linkall">пользовательским соглашением</a></div>
                               </div>
                         <div class="saveVyz">
-                            <span><input type="submit" class="saveVyzBut7" value="Создать Замок"/></span>
+                            <span><input type="submit" class="saveVyzBut8" value="Создать Замок"/></span>
                         </div>
                 </form>
                          
@@ -141,4 +169,5 @@
          </div>
      </div>
 </body>
+
 </html>

@@ -4,8 +4,27 @@
     <meta charset="UTF-8">
     <title>SkillPlus.Me</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <link href="css/magicsuggest-min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/zero.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"> 
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="SkillPlus.Me"/>
@@ -54,7 +73,21 @@
                <a class="viewPodvigHrefNA" href="mycastle.html">Настройки</a>
         <div class="doblAv">
               <div class="newmycas">
-                    <span class="zvanie"><span id="zvanielog">Логин </span> <img src="image/medal.png" id="zvanieimg" alt="медаль">титул: Оруженосец <span class="quest"><img src="image/vopros.png" class="zvaiepod" alt="подсказка"><span class="hint">Подсказки в качестве пояснения к полям &#40;при необходимости&#41;</span></span></span>
+                    <div>
+                        <canvas width="130px" height="130px" id="herb7">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb7');
+                              </script>
+                    </div>
+                    <div class="zvanie">
+                        <p class="fWB">Логин </p> 
+                        <p><img src="image/medal.png" id="zvanieimg" alt="медаль"> титул: Оруженосец <span class="quest"><img src="image/vopros.png" class="zvaiepod" alt="подсказка"><span class="hint">Подсказки в качестве пояснения к полям &#40;при необходимости&#41;</span></span></p>
+                        <p class="zvanie1"><img src="image/myCastle_0.png" alt="Щит"><a href="#" class="linkNew">Изменить свой герб</a></p>
+                    </div>
                 </div>
                  <div class="doblCont">
                     <div class="doblHead"><img src="image/shield.png" alt="Щит"><div class="doblHeadSlog">Доблести</div></div>
@@ -206,8 +239,8 @@
                          <p>Дизайн, IT-технологии, Монтаж видеороликов</p>
                      </div>
                  </div>
-                 <p class="doblEnd"><span>Брошено вызовов:</span> 15</p>
-                 <p class="doblEnd"><span>Совершено подвигов:</span> 15</p>
+                 <p class="doblEnd"><span>Количество созданных вызовов по предметным областям:</span> 15</p>
+                 <p class="doblEnd"><span>Количество совершенных подвигов по предметным областям:</span> 15</p>
         </div>
           <div class="footUp">
                  <p><span id="footUpText">Расскажи друзьям: &nbsp;</span></p>

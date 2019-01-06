@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <title>SkillPlus.Me</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <link href="css/magicsuggest-min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/zero.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"> 
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="SkillPlus.Me"/>
@@ -58,79 +73,38 @@
                <a class="allPodvigHref1NA" href="achievements.html">Мои достижения</a>
                <a class="viewPodvigHref" href="mycastle.html">Настройки</a>
             <div class="reginput">
-               <div class="imgav">
-                            <img src="image/avatarbig.png" alt="фото" class="avatarImg">
-                            <form enctype="multipart/form-data" method="post">
-                                <p><input type="file" name="f"></p>
-                            </form>
-                        </div>
+               
                 <form action="#" class="form" id="formRegistration">
-                    <label>Рыцарское имя (логин)<span class="colRed">*</span>:</label><input type="text" name="login" class="regin" id="login" /><br>
-                    <label>Введите пароль<span class="colRed">*</span>:</label><input type="password" name="password" id="Password" class="regin" required /><br>
+                    <label>Рыцарское имя<br> (логин)<span class="colRed">*</span>:</label><input type="text" name="login" class="regin" id="login" />
+                    <br>
+                    <label>Введите пароль<span class="colRed">*</span>:</label><input type="password" name="password" id="password" class="regin" required />
+                    <br>
                     <label>Повторите пароль<span class="colRed">*</span>:</label><input type="password" name="password2" id="ConfirmPassword" class="regin" required /><br>
-                    <label>e&#45;mail<span class="colRed">*</span>:</label><input type="email" name="email" class="regin" id="email"/>&nbsp;&nbsp;<input type="checkbox" name="vidno" class="vidnoEmail"> Видно всем<br>
-                    <label>Имя:</label><input type="text" name="name" class="regin" id="name" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем <br>
-                    <label>Фамилия:</label><input type="text" name="surname" class="regin" id="surname" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
-                    <label>Дата рождения:</label><input type="date" class="regin" id="regdate" name="date">&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
-                    <label>Страна:</label><input type="text" name="name" class="regin" id='country'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем<br>
+                    <label>e&#45;mail<span class="colRed">*</span>:</label><input type="email" name="email" class="regin" id="email"/>&nbsp;&nbsp;<input type="checkbox" name="vidno" class="vidnoEmail"> Видно всем
+                    <br>
+                    <label>Имя:</label><input type="text" name="name" class="regin" id="name" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем 
+                    <br>
+                    <label>Фамилия:</label><input type="text" name="surname" class="regin" id="surname" />&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                    <br>
+                    <label>Дата рождения:</label><input type="date" class="regin" id="regdate" name="date">&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                    <br>
+                    <label>Страна:</label><input type="text" name="name" class="regin" id='country'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
+                    <br>
                     <label>Город:</label><input type="text" name="name" class="regin" id='sity'/>&nbsp;&nbsp;<input type="checkbox" name="vidno"> Видно всем
-                        <div class="regcategor">
-                            <span class="catZag">Выши интересы:&nbsp; </span>
+                      
+                       <div class="categor1">
+                            <span class="catZag1">Ваши интересы: </span>
                               <div class="catnew">
-                               <ul>
-                                   <li><span class="catsp"><input type="checkbox" name="">Архитектура, строительство</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Биология, география, химия</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Дизайн, искусство, музыка</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Изучение языков</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Информационные технологии</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">История и обществоведение</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Красота и здоровье</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Менеджмент и саморазвитие</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Педагогика, психология</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Производство</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Страхование</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Торговля, закупки</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Транспорт и логистика</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Туризм, гостиницы, рестораны</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Физика и математика</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Физкультура и спорт</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Финансы</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Юриспруденция</span></li>
-                               </ul>
-                              </div>   
+                               <div id="magicsuggest"></div>
+                              </div> 
                         </div>
-                        <div class="regcategor">
-                            <div class="regcatZag">Выши сильные<br> стороны:&nbsp; </div>
+                        
+                        <div class="categor2">
+                            <div class="regcatZag1">Выши сильные<br> стороны: </div>
                               <div class="catnew">
-                               <ul>
-                                   <li><span class="catsp"><input type="checkbox" name="">Архитектура, строительство</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Биология, география, химия</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Дизайн, искусство, музыка</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Изучение языков</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Информационные технологии</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">История и обществоведение</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Красота и здоровье</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Менеджмент и саморазвитие</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Педагогика, психология</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Производство</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Страхование</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Торговля, закупки</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Транспорт и логистика</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Туризм, гостиницы, рестораны</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Физика и математика</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Физкультура и спорт</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Финансы</span></li>
-                                   <li><span class="catsp"><input type="checkbox" name="">Юриспруденция</span></li>
-                               </ul>
-                              </div>   
+                               <div id="magicsuggest2"></div>
+                              </div> 
                         </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
                        
                        
                         <div class="saveVyz">

@@ -5,8 +5,25 @@
     <title>SkillPlus.Me</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/zero.css" type="text/css">
     <link rel="stylesheet" href="css/style.css">
+    <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
     <meta property="og:locale" content="ru_RU"/>
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="SkillPlus.Me"/>
@@ -38,71 +55,239 @@
         <div class="indexReg">
             <img src="image/indexEnter.png" alt="Регистрация">
             <div class="indexEnter">
-                <p><a href="#">Brave Knight</a></p>
-                <p><a href="#">Выход</a></p>
+                <p><a href="#">Вход</a></p>
+                <p><a href="#">Регистрация</a></p>
             </div>
             <span class="menyGlavnaya">
            <ul>
                <li><a href="vyzovy1.html">Вызовы</a></li>
-               <li><a href="podvygi1.html">Подвиги</a></li>
-               <li><a href="cancelaria.html">Канцелярия</a></li>
+               <li><a href="podvygi1.html">Проекты</a></li>
+               <li><a href="#">Тарифы</a></li>
+               <li><a href="#">Блог</a></li>
+               <li><a href="#">Контакты</a></li>
            </ul>
        </span>
+       <div class="newIndexTop1"><h1>Романтика<br> проектного обучения</h1></div>
+       <h4 class="newIndexTop2">Управляйте учебными проектами на игрофицированной платформе</h4>
+       <div class="newIndexTop3"><a href="">Создать проект</a></div>
         </div>
-        <div class="indexLogOut" style="display: none;">
-            <img src="image/indexAutoriz.png" alt="Регистрация">
-            <div class="indexOut">
-                <p><a href="#">Login</a></p>
-                <p><a href="#">Выход</a></p>
-            </div>
-        </div>
-         <div class="upRight">
-             <img src="image/newindex.png" alt="Рыцари">
-         </div>
-         <div class="upLeft">
-                 <div class="enterReg">
-                        
-                         <img src="image/enter-reg.png" alt="Вход">
-                     <p><a href="#">Вход</a>&nbsp;/&nbsp;<a href="#">Регистрация</a></p>
-                     
-                 </div>
-         </div>
        </div>
      </div>
-     <div class="topFlagi">
-             <div class="flagL">
-                 <img src="image/top-flag.png" alt="флаг">
-                 <p>Прими вызов, соверши подвиг <br> и стань героем!</p>
-                 <div class="flagContButt"><a href="vyzovy1.html"><p class="flagLP">Прими вызов!</p></a></div>
+     
+     <div class="howItWork">
+        <div class="howItWork1">
+            <div class="newIndexTop4"><h2>Как это работает?</h2></div>
+                 <div class="newIndexTop5">
+                     <div class="mt70">
+                         <img src="image/index1.png" alt="скриншот">
+                         <p>Создайте проект и наполните его заданиями</p>
+                     </div>
+                     <div>
+                         <img src="image/index2.png" alt="скриншот">
+                         <p>Контролируйте ход проекта и проверяйте задания</p>
+                     </div>
+                     <div class="mt70">
+                         <img src="image/index3.png" alt="скриншот">
+                         <p>Отслеживайте статистику заданий и участников</p>
+                     </div>
+                 </div>
+            <div class="link_creatTow4 ml42P"><a href="#" class="fs18">Подробнее</a></div>
+        </div>    
+     </div>
+     
+     <div class="indexVyzov1">
+         <div class="indexVyzov2">
+             <div class="indexVyzov3">
+                 <h2 class="indexVyzovP1">Еще Не готовы создать проект?</h2>
+                 <h3 class="indexVyzovP2">А пару-тройку простых заданий?</h3>
              </div>
-             <div class="flagL">
-                 <img src="image/top-flag.png" alt="флаг">
-                 <p>Брось вызов! Помоги новобранцам совершить<br>подвиги и стать героями.</p>
-                 <div class="flagContButt"><a href="vyzovy1.html"><p class="flagLP">Бросить вызов!</p></a></div>
-             </div>
-         </div>
-     <div class="topdownBody">
-         <h1>Хроники</h1>
-         <div class="topaboutCon">
-             <div class="topAbout">
-                 <p class="topAbout1">О платформе</p>
-                 <p class="topAbout2">Буквально три &mdash; четыре строки из текста. Буквально три &mdash; четыре строки из текста. Буквально три &mdash; четыре строки из текста.</p>
-                 <a href="#" class="topAbout3">подробнее >> </a>
-             </div>
-             <div class="topAbout">
-                 <p class="topAbout1">Пример заголовка, который занимает больше одной строки</p>
-                 <p class="topAbout2">Буквально три &mdash; четыре строки из текста. Буквально три &mdash; четыре строки из текста. Буквально три &mdash; четыре строки из текста.</p>
-                 <a href="#" class="topAbout3">подробнее >> </a>
-             </div>
-             <div class="topAbout">
-                 <p class="topAbout1">Система геймификации в обучении</p>
-                 <p class="topAbout2">Буквально три &mdash; четыре строки из текста. Буквально три &mdash; четыре строки из текста. Буквально три &mdash; четыре строки из текста.</p>
-                 <a href="#" class="topAbout3">подробнее >> </a>
+             <div class="indexVyzov4 fs18">
+                 <p class="fWB">Вы однозначно умеете что-то особенное!</p>
+                 <p class="pb30">Бросьте вызов тем, кому эта тема тоже интересна: создайте для них интересное задание, которое они будут выполнять с удовольствием! Пройдет совсем немного времени, и вы удивитесь, какие плоды это даст!</p>
+                 <a href="#" class="indexVyzA fs18">Бросить вызов</a>
              </div>
          </div>
      </div>
+     
+     <div class="afterInV">
+         <h2 class="indexVyzovP1 tac">Ваше оружие, побеждающее лень и невежество</h2>
+         <div class="afterInV1">
+             <div class="afterInV2">
+                 <img src="image/index6.png" alt="logo">
+                 <h3 class="indexVyzovP3">Бросайте вызовы</h3>
+                 <p>Создавайте задания по своим любимым темам, которые будут полезны всем, кто тоже ими интересуются.</p>
+             </div>
+             <div class="afterInV2">
+                 <img src="image/index4.png" alt="logo">
+                 <h3 class="indexVyzovP3">Совершайте подвиги</h3>
+                 <p>Выполняйте задания, созданные другими пользователями, чтобы прокачаться до уровня настоящего героя.</p>
+             </div>
+             <div class="afterInV2">
+                 <img src="image/index8.png" alt="logo">
+                 <h3 class="indexVyzovP3">Будьте в курсе</h3>
+                 <p>Следите за интересными событиями и узнавайте обо всем первыми с помощью удобной системы уведомлений.</p>
+             </div>
+             <div class="afterInV2">
+                 <img src="image/index5.png" alt="logo">
+                 <h3 class="indexVyzovP3">Создавайте историю</h3>
+                 <p>Создайте свой уникальный герб, который расскажет всем о ваших подвигах и достижениях во имя просвещения.</p>
+             </div>
+             <div class="afterInV2">
+                 <img src="image/index7.png" alt="logo">
+                 <h3 class="indexVyzovP3">Будьте лидером</h3>
+                 <p>Управляйте учебными проектами: управляйте задачами, командой и наставниками, отслеживайте прогресс, рискуйте и побеждайте вместе</p>
+             </div>
+             <div class="afterInV2">
+                 <img src="image/index9.png" alt="logo">
+                 <h3 class="indexVyzovP3">Творите в команде</h3>
+                 <p>Участвуйте в учебных проектах, выполняйте интересные задачи, побеждайте и получайте главный трофей!</p>
+             </div>
+             <a href="#" class="indexVyzB">создать проект</a>
+         </div>
+     </div>
+     
+     <div class="anyQuestion">
+        <h2 class="indexVyzovP1 tac">на любой вопрос есть ответ!</h2>
+         <div class="anyQuestion1">
+            <div class="anyQuestionLeft">
+                <div class="anyQuestionLeft1"><img src="image/indexbook.png" alt="Книга"></div>
+                <div class="anyQuestionLeft2">библиотека</div>
+            </div>
+            <div class="anyQuestionRight">
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Ваша система подходит учителям?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Подходит, конечно! И не только учителям – всем, кто обучает и обучается. 
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Но ведь играми увлекается только молодежь?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Многие так думают, но это стереотип! Например, по результатам одного масштабного исследования, самый большой спрос на игрофицированные процессы (в том числе – и обучение) был у людей старше 40 лет! 
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Зачем мне создавать задания для других?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Так устроено социальное обучение: люди объединяются и обучаются в сообществе. Помогая развиваться другим, мы развиваемся сами, и это лучший обмен, который придуман человечеством.  
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Какие учебные проекты я могу создавать?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Любые проекты, для которых вы готовы продумать коллекцию заданий 3 уровней сложности, а также организовать команду на их выполнение   
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Зачем на проекты приглашать судей?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Бывают сложные проекты, на которых одному наставнику не управиться. Например, если вы хотите провести онлайн-хакатон - пригласите для этого несколько предметных экспертов, и они помогут вам обеспечить эффективную работу всех команд. 
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                       <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Сколько человек может участвовать в учебном проекте?</span>
+                   </div> 
+                    <div class="anyQuestionRight4">
+                        От одного до… В общем, много  Но наш опыт показывает, что один опытный наставник может эффективно курировать 10-12 человек. Команда наставников, конечно же, способна на большее! 
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Думаю, мне все же понадобится обучение. Поможете?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Безусловно! Во-первых, мы уже подготовили для вас много полезных материалов. Во-вторых, мы можем провести для вас и/или ваших сотрудников обучение, а также обеспечить полную методическую поддержку по внедрению проектного подхода в их курсы! Напишите нам свой запрос! 
+                    </div>
+                </div>
+                    
+                <div class="anyQuestionRight1">
+                   <div class="anyQuestionRight5">
+                    <span class="anyQuestionRight2"></span><span class="anyQuestionRight3">Можно ли вашу систему установить на наши сервера?</span>
+                    </div>
+                    <div class="anyQuestionRight4">
+                        Можно. Если вы хотите получить копию системы и установить ее на ваших внутренних серверах, чтобы давать туда доступ, напишите нам – обсудим! 
+                    </div>
+                </div>
+                <div class="mt38">
+                   <a href="#" class="indexVyzC fs18">Все вопросы</a> 
+                </div>   
+            </div>
+         </div>
+     </div>
+     
+     <div class="representation">
+        <h2 class="indexVyzovP4 tac">представление</h2>
+         <div class="representation1">
+            <div class="representation2">
+                <img src="image/indexvideo.png" alt="Инструкции">
+            </div>
+            <div class="representation3">
+               <p>Наши герольды готовы провести для вас вебинар-презентацию, на которой без обиняков ответят на все возникшие вопросы. Расскажут вам такое, чего вы больше ни от кого не узнаете. </p>
+               <p>Только скажите, куда почтовых голубей отправлять?</p>
+               <form action="">
+                   <input type="email" class="representation4" placeholder="Введите Ваш Email" required>
+                   <div><input type="submit" class="representation5" value="Отправить"/></div>
+               </form> 
+            </div>
+             
+         </div>
+     </div>
+   
+     <div class="topdownBody">
+         <h2 class="indexVyzovP1 tac">Хроники</h2>
+         <div class="topaboutCon">
+             <div class="topAbout">
+                 <p class="topAbout1">Благодарственное о дружбе</p>
+                 <p class="topAbout2">Вот уже прошло 2 недели, как мы пригласили первых друзей в гости - осмотреться и освоиться в SkillPlus.me...</p>
+                 <a href="#" class="topAbout3">подробнее >> </a>
+             </div>
+             <div class="topAbout">
+                 <p class="topAbout1">Делимся мастерством, бросая вызовы</p>
+                 <p class="topAbout2">Подготовили для славных рыцарей свод правил о том, как бросать вызовы! Ведь каждый созданный вызов - это плюс к вашей репутации...</p>
+                 <a href="#" class="topAbout3">подробнее >> </a>
+             </div>
+             <div class="topAbout">
+                 <p class="topAbout1">Добрая весть о турнирах</p>
+                 <p class="topAbout2">"Какое же рыцарское государство без турниров?!" - заметят придирчивые современники наши, и будет это замечание совершенно..."</p>
+                 <a href="#" class="topAbout3">подробнее >> </a>
+             </div>
+             <div class="topAbout">
+                 <p class="topAbout1">Благодарственное о дружбе</p>
+                 <p class="topAbout2">Вот уже прошло 2 недели, как мы пригласили первых друзей в гости - осмотреться и освоиться в SkillPlus.me...</p>
+                 <a href="#" class="topAbout3">подробнее >> </a>
+             </div>
+             <div class="topAbout">
+                 <p class="topAbout1">Делимся мастерством, бросая вызовы</p>
+                 <p class="topAbout2">Подготовили для славных рыцарей свод правил о том, как бросать вызовы! Ведь каждый созданный вызов - это плюс к вашей репутации...</p>
+                 <a href="#" class="topAbout3">подробнее >> </a>
+             </div>
+             <div class="topAbout">
+                 <p class="topAbout1">Добрая весть о турнирах</p>
+                 <p class="topAbout2">"Какое же рыцарское государство без турниров?!" - заметят придирчивые современники наши, и будет это замечание совершенно..."</p>
+                 <a href="#" class="topAbout3">подробнее >> </a>
+             </div>
+         </div> 
+         <div class="linkToBlog"><a href="#" class="indexVyzE fs18">В блог</a></div>  
+     </div>
      <div class="footer">
-         <div class="footUp">
+         <div class="footUp ml0">
              <p><span id="footUpText">Расскажи друзьям: &nbsp;</span></p>
                  <script type="text/javascript">(function() {
   if (window.pluso)if (typeof window.pluso.start == "function") return;

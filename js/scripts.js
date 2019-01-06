@@ -18,11 +18,18 @@ $(document).ready(function($) {
                     },
         password2: {
                       required: true,
-                      equalTo: "#Password",
+                      equalTo: "#password",
         },
-          comment: {
-                      required: true,    
-          }
+        comment: {
+                    required:true,
+        },
+        
+        gsmphone: {
+                      required: true,
+        },
+        gsmreg: {
+                      required: true,
+        }  
       },
         messages:{
                password:{
@@ -39,18 +46,13 @@ $(document).ready(function($) {
                       required: "Это поле обязательно для заполнения",
                       maxlength: "Максимум 16 символов",
               },
-              // name: {
-              //        required: "Это поле обязательно для заполнения",
-              //        minlength: "Минимум 2 символа",
-              //        maxlength: "Максимум 16 символов",
-              //        alphabetsAndSpacesOnly: "Допустимы только буквы",
-              // },
-              // surname: {
-              //        required: "Это поле обязательно для заполнения",
-              //        minlength: "Минимум 2 символа",
-              //        maxlength: "Максимум 16 символов",
-               //       alphabetsAndSpacesOnly: "Допустимы только буквы",
-              // },
+               gsmphone: {
+                      required: "Это поле обязательно для заполнения",
+               },
+               gsmreg: {
+                      required: "Это поле обязательно для заполнения",
+              
+               },
                email: {
                       email: "Введите корректный адрес электронной почты",
                       required: "Это поле обязательно для заполнения",
@@ -121,7 +123,7 @@ $(function() {
 
 $(function() {
  $('#magicsuggest2').magicSuggest({
-        placeholder: 'Введите категорию',
+        placeholder: 'Введите названия тематических категорий',
         data: ['Наука', 'IT', 'Спорт', 'Общество', 'Кино', 'Физика', 'Финансы', 'Биология'],
         strictSuggest: true,
         hideTrigger: true,
@@ -140,6 +142,26 @@ $(function() {
     });
 });
 
+$(function() {
+ $('#magicsuggest5').magicSuggest({
+        placeholder: 'Введите e-mail или логин',
+        data: ['krylolga', 'Alex', 'Brave Knight', 'Comrade Vasilyev', 'Кино', 'Физика', 'Финансы', 'Биология'],
+        strictSuggest: true,
+        hideTrigger: true,
+        allowFreeEntries: true,
+    });
+});
+
+$(function() {
+    $('#magicsuggest6').magicSuggest({
+        data: ['Наука', 'IT', 'Спорт', 'Общество', 'Кино', 'Физика', 'Финансы', 'Биология','Информационные технологии', 'Изобразительное искусство', 'Лабораторные исследования'],
+        allowFreeEntries: false,
+        placeholder: 'Выберите тематические категории для вашего турнира',
+        strictSuggest: true,
+        hideTrigger: true,
+    });
+});
+
 $(function()
 {
 	$('.scroll-pane').jScrollPane(
@@ -152,13 +174,13 @@ $(function()
 
 function changeItem() {
             document.getElementById('changeColor').style.background = '#6a9d43';
-         }
-         function rechangeItem() {
+         };
+function rechangeItem() {
             document.getElementById('changeColor').style.background = '#508bbd';
-         } 
+         }; 
 
-function herbOne(){   
-        var canvas = document.getElementById('herb1');
+function herbOne(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
               var ctx = canvas.getContext('2d');
                  ctx.clearRect(0, 0, 130, 130);
@@ -176,8 +198,8 @@ function herbOne(){
              }
 };
 
-function herbTwo(){   
-        var canvas = document.getElementById('herb1');
+function herbTwo(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
                     var ctx = canvas.getContext('2d');
                      ctx.beginPath();
@@ -191,8 +213,8 @@ function herbTwo(){
              }
 };
 
-function herbThree(){   
-        var canvas = document.getElementById('herb1');
+function herbThree(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
@@ -208,8 +230,8 @@ function herbThree(){
              }
 };
 
-function herbFour(){   
-        var canvas = document.getElementById('herb1');
+function herbFour(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
@@ -225,8 +247,8 @@ function herbFour(){
              }
     };
 
-function herbFive(){   
-        var canvas = document.getElementById('herb1');
+function herbFive(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
@@ -243,8 +265,8 @@ function herbFive(){
              }
 };
 
-function herbSix(){   
-        var canvas = document.getElementById('herb1');
+function herbSix(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
@@ -266,8 +288,8 @@ function herbSix(){
              }
 };
 
-function herbSeven(){   
-        var canvas = document.getElementById('herb1');
+function herbSeven(canvasId){   
+        var canvas = document.getElementById(canvasId);
              if (canvas.getContext){
                    var ctx = canvas.getContext('2d');  
                     ctx.beginPath();
@@ -330,7 +352,7 @@ function herbS(){
         {
                herbShape = radio[7].value;
          }
-    drawHerb();
+    drawHerb('herb1');
 }
 
 function grdOne(){
@@ -356,7 +378,7 @@ function grdOne(){
         {
                herbGrad = radio[4].value;
          }
-    drawHerb();
+    drawHerb('herb1');
 }
 
 function herbCol1(){
@@ -398,7 +420,7 @@ function herbCol1(){
         {
                herbColor1 = radio[8].value;
          }
-    drawHerb();
+    drawHerb('herb1');
 }
 
 function herbCol2(){
@@ -440,11 +462,11 @@ function herbCol2(){
         {
                herbColor2 = radio[8].value;
          }
-    drawHerb();
+    drawHerb('herb1');
 }
 
-function drawHerb(){   
-  var canvas = document.getElementById('herb1');
+function drawHerb(canvasId){   
+  var canvas = document.getElementById(canvasId);
   var ctx = canvas.getContext('2d');
 
   ctx.clearRect(0, 0, 130, 130);
@@ -452,25 +474,25 @@ function drawHerb(){
   
   switch ( herbShape ) {
       case "1":
-         herbOne();
+         herbOne(canvasId);
          break; 
       case "2":
-         herbTwo();
+         herbTwo(canvasId);
          break;
       case "3":
-         herbThree();
+         herbThree(canvasId);
          break;
       case "4":
-         herbFour();
+         herbFour(canvasId);
          break;
       case "5":
-         herbFive();
+         herbFive(canvasId);
          break;
       case "6":
-         herbSix();
+         herbSix(canvasId);
          break;
       case "7":
-         herbSeven();
+         herbSeven(canvasId);
          break;
   }
     
@@ -557,7 +579,7 @@ function drawHerb(){
   }
     
 
-  var ctx2 = document.getElementById('herb1');
+  var ctx2 = document.getElementById(canvasId);
   ctx.drawImage(ctx2, 0, 0);
   ctx.fillStyle = grd;
   ctx.fill();
@@ -614,6 +636,56 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $(".vyzMediaObj1").click(function () {
+        if ($("#contMedia1").is(":hidden")) {
+            $("#contMedia1").show("slow");
+        } else {
+            $("#contMedia1").hide("slow");
+        }
+        return false;
+    });
+});
+
+$(document).ready(function(){
+    $(".vyzMediaObj2").click(function () {
+        if ($("#contMedia2").is(":hidden")) {
+            $("#contMedia2").show("slow");
+        } else {
+            $("#contMedia2").hide("slow");
+        }
+        return false;
+    });
+});
+
+$(document).ready(function(){
+    $('.vyzMediaObj1').on('click', function() {
+      if (!$(this).hasClass('clicked')) {
+        $(this).addClass('clicked'); 
+        $('#hideMeda1').css({'display' : 'inline-block'});
+        $('#showMeda2').prop('disabled', true); 
+      } else { 
+        $(this).removeClass('clicked');
+        $('#hideMeda1').css({'display' : 'none'});
+        $('#showMeda2').prop('disabled', false);
+      }
+    });
+});
+
+$(document).ready(function(){
+    $('.vyzMediaObj2').on('click', function() {
+      if (!$(this).hasClass('clicked')) { 
+        $(this).addClass('clicked'); 
+        $('#hideMeda2').css({'display' : 'inline-block'});
+        $('#showMeda1').prop('disabled', true); 
+      } else { 
+        $(this).removeClass('clicked'); 
+        $('#hideMeda2').css({'display' : 'none'});
+        $('#showMeda1').prop('disabled', false);
+      }
+    });
+});
+
 jQuery(document).ready(function(){
     jQuery('.scrollbar-chrome').scrollbar();
 });
@@ -625,10 +697,10 @@ jQuery(document).ready(function(){
 $(document).ready(function(){
     $('.castleSlider').slick({
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 10,
-    centerMode: true,
+    centerMode: false,
     variableWidth: true,
     arrows: true,
     prevArrow: '<button type="button" class="slick-prev"><img src="image/tourn_L.png"></button>',
@@ -638,4 +710,92 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $("#myTable").tablesorter();
+});
+
+$(document).ready(function(){
+   $("#myTable tr").each(function (index) {        
+        $(this).mouseover(function() {
+                $(this).find(".closeUserInfo").css({"display" : "inline-block","vertical-align" : "middle", "margin-left" : "20px"});
+           $(this).mouseleave(function() {
+                $(this).find(".closeUserInfo").css({"display" : "none"})
+            });
+        });
+       var modalDialog = $(this).find('.modalDialog');
+       $(this).find(".closeUserInfo").click(function(event){
+           //event.preventDefault();
+            modalDialog.display('block');
+        });
+        modalDialog.find('.delItem').click(function(){
+            $(this).parents("tr").hide();
+            window.location.hash = '';
+        });
+           //event.preventDefault();
+            //$(this).parents("tr").hide();
+       
+    });               
+});
+
+$(document).ready(function() {
+    $('.closedMyChat').click(function() {
+       $('.myChatOpen').css({'display' : 'none'});
+       $('.myChatClosed1').css({'display' : 'block'});
+    });
+    $('.openMyChat').click(function() {
+       $('.myChatClosed1').css({'display' : 'none'});
+       $('.myChatOpen').css({'display' : 'block'});
+    });
+    $('.myChatOpen10').find('.chatRed').click(function() {
+       $(this).parents('.myChatOpen10').css({'display' : 'none'});
+       $('.myChatOpen10Edit').css({'display' : 'block'});
+    });
+    $('.myChatOpen10Edit').find('.chatRed').click(function() {
+       $(this).parents('.myChatOpen10Edit').css({'display' : 'none'});
+       $('.myChatOpen10').css({'display' : 'block'});
+    });
+});
+
+jQuery (function ($) { 
+  $(function() {
+    function maskPhone() {
+      var country = $('#gsm_country option:selected').val();
+      switch (country) {
+        case "by":
+          $("#gsmphone").mask("+375(99) 999-99-99");
+          break;
+        case "ru":
+          $("#gsmphone").mask("+7(999) 999-99-99");
+          break;
+        case "ua":
+          $("#gsmphone").mask("+380(999) 999-99-99");
+          break;
+        case "kz":
+          $("#gsmphone").mask("+7(999) 999-99-99");
+          break;
+      }    
+    }
+    maskPhone();
+    $('#gsm_country').change(function() {
+      maskPhone();
+    });
+  });
+});
+
+$(document).ready(function() {
+    $( "#getCode" ).click(function( event ) {
+      event.preventDefault();
+    });
+});
+
+$(function() {
+    $(".anyQuestionRight1").each(function(index){
+        $(this).children('.anyQuestionRight5').click(function(){
+            if($(this).hasClass('indexhide') == false){
+                $(this).addClass('indexhide');
+                $(this).siblings('.anyQuestionRight4').show('slow');   
+            }else if($(this).hasClass('indexhide') == true){
+                $(this).removeClass('indexhide');
+                $(this).siblings('.anyQuestionRight4').hide('slow');
+            }
+        });
+    });
 });
