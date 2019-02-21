@@ -382,86 +382,14 @@ function grdOne(){
 }
 
 function herbCol1(){
-       var radio = document.getElementsByName('color1');
-
-       if (radio[0].checked)
-        {
-               herbColor1 = radio[0].value;
-        }
-        else if (radio[1].checked)
-        {
-               herbColor1 = radio[1].value;
-         }
-        else if (radio[2].checked)
-        {
-               herbColor1 = radio[2].value;
-         }
-         else if (radio[3].checked)
-        {
-               herbColor1 = radio[3].value;
-         }
-        else if (radio[4].checked)
-        {
-               herbColor1 = radio[4].value;
-         }
-         if (radio[5].checked)
-        {
-               herbColor1 = radio[5].value;
-        }
-        else if (radio[6].checked)
-        {
-               herbColor1 = radio[6].value;
-         }
-        else if (radio[7].checked)
-        {
-               herbColor1 = radio[7].value;
-         }
-         else if (radio[8].checked)
-        {
-               herbColor1 = radio[8].value;
-         }
+        var testColor = document.getElementById('getColor');
+              herbColor1 = testColor.value;      
     drawHerb('herb1');
 }
 
 function herbCol2(){
-       var radio = document.getElementsByName('color2');
-
-       if (radio[0].checked)
-        {
-               herbColor2 = radio[0].value;
-        }
-        else if (radio[1].checked)
-        {
-               herbColor2 = radio[1].value;
-         }
-        else if (radio[2].checked)
-        {
-               herbColor2 = radio[2].value;
-         }
-         else if (radio[3].checked)
-        {
-               herbColor2 = radio[3].value;
-         }
-        else if (radio[4].checked)
-        {
-               herbColor2 = radio[4].value;
-         }
-         if (radio[5].checked)
-        {
-               herbColor2 = radio[5].value;
-        }
-        else if (radio[6].checked)
-        {
-               herbColor2 = radio[6].value;
-         }
-        else if (radio[7].checked)
-        {
-               herbColor2 = radio[7].value;
-         }
-         else if (radio[8].checked)
-        {
-               herbColor2 = radio[8].value;
-         }
+       var testColor2 = document.getElementById('getColor2');
+              herbColor2 = testColor2.value;
     drawHerb('herb1');
 }
 
@@ -496,64 +424,6 @@ function drawHerb(canvasId){
          break;
   }
     
-      switch ( herbColor1 ) {
-      case "1":
-         herbColor1 = "#e4e4e4";
-         break; 
-      case "2":
-         herbColor1 = "#424242";
-         break;
-      case "3":
-         herbColor1 = "#e9cb5d";
-         break;
-      case "4":
-         herbColor1 = "#ec9049";
-         break;
-      case "5":
-         herbColor1 = "#89dbf3";
-         break;
-      case "6":
-         herbColor1 = "#54a3e5";
-         break;
-      case "7":
-         herbColor1 = "#40c62b";
-         break;
-       case "8":
-         herbColor1 = "#059535";
-         break;
-      case "9":
-         herbColor1 = "#80243e";
-         break;
-  }
-          switch ( herbColor2 ) {
-      case "1":
-         herbColor2 = "#e4e4e4";
-         break; 
-      case "2":
-         herbColor2 = "#424242";
-         break;
-      case "3":
-         herbColor2 = "#e9cb5d";
-         break;
-      case "4":
-         herbColor2 = "#ec9049";
-         break;
-      case "5":
-         herbColor2 = "#89dbf3";
-         break;
-      case "6":
-         herbColor2 = "#54a3e5";
-         break;
-      case "7":
-         herbColor2 = "#40c62b";
-         break;
-       case "8":
-         herbColor2 = "#059535";
-         break;
-      case "9":
-         herbColor2 = "#80243e";
-         break;
-  }
       
   switch ( herbGrad ) {
     case "1": // вертикальное разделение
@@ -586,261 +456,261 @@ function drawHerb(canvasId){
   ctx.stroke();              
 }
 
-$(document).ready(function(){
-    $("#showHideContent").click(function () {
-        if ($("#content").is(":hidden")) {
-            $("#content").show("slow");
-        } else {
-            $("#content").hide("slow");
-        }
-        return false;
-    });
-});
-
-$(document).ready(function(){
-  $(".lentaNews_1").each(function (index) {
-      $(this).find('.lenta_del_link').click(function(){
-          $(this).parents(".lentaNews_1").hide("slow");
-      });
-  });
-});
-
-$(document).ready(function(){
-  $(".lentaNews").each(function (index) {
-      $(this).find('.lenta_del_link').click(function(){
-          $(this).parents(".lentaNews").hide("slow");
-      });
-  });
-});
-
-$(document).ready(function(){
-    $("#showNotif").click(function () {
-        if ($("#contNotif").is(":hidden")) {
-            $("#contNotif").show("slow");
-        } else {
-            $("#contNotif").hide("slow");
-        }
-        return false;
-    });
-});
-
-$(document).ready(function(){
-    $("#hideNotification").click(function () {
-        if ($("#contNotif").is(":hidden")) {
-            $("#contNotif").show("slow");
-        } else {
-            $("#contNotif").hide("slow");
-        }
-        return false;
-    });
-});
-
-$(document).ready(function(){
-    $(".vyzMediaObj1").click(function () {
-        if ($("#contMedia1").is(":hidden")) {
-            $("#contMedia1").show("slow");
-        } else {
-            $("#contMedia1").hide("slow");
-        }
-        return false;
-    });
-});
-
-$(document).ready(function(){
-    $(".vyzMediaObj2").click(function () {
-        if ($("#contMedia2").is(":hidden")) {
-            $("#contMedia2").show("slow");
-        } else {
-            $("#contMedia2").hide("slow");
-        }
-        return false;
-    });
-});
-
-$(document).ready(function(){
-    $('.vyzMediaObj1').on('click', function() {
-      if (!$(this).hasClass('clicked')) {
-        $(this).addClass('clicked'); 
-        $('#hideMeda1').css({'display' : 'inline-block'});
-        $('#showMeda2').prop('disabled', true); 
-      } else { 
-        $(this).removeClass('clicked');
-        $('#hideMeda1').css({'display' : 'none'});
-        $('#showMeda2').prop('disabled', false);
-      }
-    });
-});
-
-$(document).ready(function(){
-    $('.vyzMediaObj2').on('click', function() {
-      if (!$(this).hasClass('clicked')) { 
-        $(this).addClass('clicked'); 
-        $('#hideMeda2').css({'display' : 'inline-block'});
-        $('#showMeda1').prop('disabled', true); 
-      } else { 
-        $(this).removeClass('clicked'); 
-        $('#hideMeda2').css({'display' : 'none'});
-        $('#showMeda1').prop('disabled', false);
-      }
-    });
-});
-
-jQuery(document).ready(function(){
-    jQuery('.scrollbar-chrome').scrollbar();
-});
-
-jQuery(document).ready(function(){
-    jQuery('.scrollbar-chrome_Castle').scrollbar();
-});
-
-$(document).ready(function(){
-    $('.castleSlider').slick({
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 16,
-    centerMode: false,
-    variableWidth: true,
-    arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><img src="image/tourn_L.png"></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="image/tourn_R.png"></button>'
-    });
-});
-
-$(document).ready(function(){
-  $("#myTable").tablesorter();
-});
-
-$(document).ready(function(){
-   $("#myTable tr").each(function (index) {        
-        $(this).mouseover(function() {
-                $(this).find(".closeUserInfo").css({"display" : "inline-block","vertical-align" : "middle", "margin-left" : "20px"});
-           $(this).mouseleave(function() {
-                $(this).find(".closeUserInfo").css({"display" : "none"})
-            });
-        });
-       var modalDialog = $(this).find('.modalDialog');
-       $(this).find(".closeUserInfo").click(function(event){
-           //event.preventDefault();
-            modalDialog.display('block');
-        });
-        modalDialog.find('.delItem').click(function(){
-            $(this).parents("tr").hide();
-            window.location.hash = '';
-        });
-           //event.preventDefault();
-            //$(this).parents("tr").hide();
-       
-    });               
-});
-
-$(document).ready(function(){
-   $("#myTable2Colum tr").each(function (index) {        
-        $(this).mouseover(function() {
-                $(this).find(".closeUserInfo").css({"display" : "inline-block","vertical-align" : "middle", "margin-right" : "10px"});
-           $(this).mouseleave(function() {
-                $(this).find(".closeUserInfo").css({"display" : "none"})
-            });
-        });
-       var modalDialog = $(this).find('.modalDialog');
-       $(this).find(".closeUserInfo").click(function(event){
-            modalDialog.display('block');
-        });
-        modalDialog.find('.delItem').click(function(){
-            $(this).parents("tr").hide();
-            window.location.hash = '';
-        });
-    });               
-});
-
-$(document).ready(function() {
-    $('.closedMyChat').click(function() {
-       $('.myChatOpen').css({'display' : 'none'});
-       $('.myChatClosed1').css({'display' : 'block'});
-    });
-    $('.openMyChat').click(function() {
-       $('.myChatClosed1').css({'display' : 'none'});
-       $('.myChatOpen').css({'display' : 'block'});
-    });
-    $('.myChatOpen10').find('.chatRed').click(function() {
-       $(this).parents('.myChatOpen10').css({'display' : 'none'});
-       $('.myChatOpen10Edit').css({'display' : 'block'});
-    });
-    $('.myChatOpen10Edit').find('.chatRed').click(function() {
-       $(this).parents('.myChatOpen10Edit').css({'display' : 'none'});
-       $('.myChatOpen10').css({'display' : 'block'});
-    });
-});
-
-jQuery (function ($) { 
-  $(function() {
-    function maskPhone() {
-      var country = $('#gsm_country option:selected').val();
-      switch (country) {
-        case "by":
-          $("#gsmphone").mask("+375(99) 999-99-99");
-          break;
-        case "ru":
-          $("#gsmphone").mask("+7(999) 999-99-99");
-          break;
-        case "ua":
-          $("#gsmphone").mask("+380(999) 999-99-99");
-          break;
-        case "kz":
-          $("#gsmphone").mask("+7(999) 999-99-99");
-          break;
-      }    
-    }
-    maskPhone();
-    $('#gsm_country').change(function() {
-      maskPhone();
-    });
-  });
-});
-
-$(document).ready(function() {
-    $( "#getCode" ).click(function( event ) {
-      event.preventDefault();
-    });
-});
-
-$(function() {
-    $(".anyQuestionRight1").each(function(index){
-        $(this).children('.anyQuestionRight5').click(function(){
-            if($(this).hasClass('indexhide') == false){
-                $(this).addClass('indexhide');
-                $(this).siblings('.anyQuestionRight4').show('slow');   
-            }else if($(this).hasClass('indexhide') == true){
-                $(this).removeClass('indexhide');
-                $(this).siblings('.anyQuestionRight4').hide('slow');
-            }
-        });
-    });
-});
-
-function changeZIndex() {
-    $(".link_creatTow5").css("z-index","0");
-};
-function rechangeZIndex() {
-    $(".link_creatTow5").css("z-index","1");
-};
-
-$(document).ready(function(){
-    $('.castleFight').slick({
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 7,
-    centerMode: false,
-    variableWidth: true,
-    arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><div class="prevSlick"></div></button>',
-    nextArrow: '<button type="button" class="slick-next"><div class="nextSlick"></div></button>'
-    });
-});
-
-$(document).ready(function(){
-  $("#myTable2Colum").tablesorter();
-});
+//$(document).ready(function(){
+//    $("#showHideContent").click(function () {
+//        if ($("#content").is(":hidden")) {
+//            $("#content").show("slow");
+//        } else {
+//            $("#content").hide("slow");
+//        }
+//        return false;
+//    });
+//});
+//
+//$(document).ready(function(){
+//  $(".lentaNews_1").each(function (index) {
+//      $(this).find('.lenta_del_link').click(function(){
+//          $(this).parents(".lentaNews_1").hide("slow");
+//      });
+//  });
+//});
+//
+//$(document).ready(function(){
+//  $(".lentaNews").each(function (index) {
+//      $(this).find('.lenta_del_link').click(function(){
+//          $(this).parents(".lentaNews").hide("slow");
+//      });
+//  });
+//});
+//
+//$(document).ready(function(){
+//    $("#showNotif").click(function () {
+//        if ($("#contNotif").is(":hidden")) {
+//            $("#contNotif").show("slow");
+//        } else {
+//            $("#contNotif").hide("slow");
+//        }
+//        return false;
+//    });
+//});
+//
+//$(document).ready(function(){
+//    $("#hideNotification").click(function () {
+//        if ($("#contNotif").is(":hidden")) {
+//            $("#contNotif").show("slow");
+//        } else {
+//            $("#contNotif").hide("slow");
+//        }
+//        return false;
+//    });
+//});
+//
+//$(document).ready(function(){
+//    $(".vyzMediaObj1").click(function () {
+//        if ($("#contMedia1").is(":hidden")) {
+//            $("#contMedia1").show("slow");
+//        } else {
+//            $("#contMedia1").hide("slow");
+//        }
+//        return false;
+//    });
+//});
+//
+//$(document).ready(function(){
+//    $(".vyzMediaObj2").click(function () {
+//        if ($("#contMedia2").is(":hidden")) {
+//            $("#contMedia2").show("slow");
+//        } else {
+//            $("#contMedia2").hide("slow");
+//        }
+//        return false;
+//    });
+//});
+//
+//$(document).ready(function(){
+//    $('.vyzMediaObj1').on('click', function() {
+//      if (!$(this).hasClass('clicked')) {
+//        $(this).addClass('clicked'); 
+//        $('#hideMeda1').css({'display' : 'inline-block'});
+//        $('#showMeda2').prop('disabled', true); 
+//      } else { 
+//        $(this).removeClass('clicked');
+//        $('#hideMeda1').css({'display' : 'none'});
+//        $('#showMeda2').prop('disabled', false);
+//      }
+//    });
+//});
+//
+//$(document).ready(function(){
+//    $('.vyzMediaObj2').on('click', function() {
+//      if (!$(this).hasClass('clicked')) { 
+//        $(this).addClass('clicked'); 
+//        $('#hideMeda2').css({'display' : 'inline-block'});
+//        $('#showMeda1').prop('disabled', true); 
+//      } else { 
+//        $(this).removeClass('clicked'); 
+//        $('#hideMeda2').css({'display' : 'none'});
+//        $('#showMeda1').prop('disabled', false);
+//      }
+//    });
+//});
+//
+//jQuery(document).ready(function(){
+//    jQuery('.scrollbar-chrome').scrollbar();
+//});
+//
+//jQuery(document).ready(function(){
+//    jQuery('.scrollbar-chrome_Castle').scrollbar();
+//});
+//
+//$(document).ready(function(){
+//    $('.castleSlider').slick({
+//    dots: false,
+//    infinite: false,
+//    speed: 300,
+//    slidesToShow: 16,
+//    centerMode: false,
+//    variableWidth: true,
+//    arrows: true,
+//    prevArrow: '<button type="button" class="slick-prev"><img src="image/tourn_L.png"></button>',
+//    nextArrow: '<button type="button" class="slick-next"><img src="image/tourn_R.png"></button>'
+//    });
+//});
+//
+//$(document).ready(function(){
+//  $("#myTable").tablesorter();
+//});
+//
+//$(document).ready(function(){
+//   $("#myTable tr").each(function (index) {        
+//        $(this).mouseover(function() {
+//                $(this).find(".closeUserInfo").css({"display" : "inline-block","vertical-align" : "middle", "margin-left" : "20px"});
+//           $(this).mouseleave(function() {
+//                $(this).find(".closeUserInfo").css({"display" : "none"})
+//            });
+//        });
+//       var modalDialog = $(this).find('.modalDialog');
+//       $(this).find(".closeUserInfo").click(function(event){
+//           //event.preventDefault();
+//            modalDialog.display('block');
+//        });
+//        modalDialog.find('.delItem').click(function(){
+//            $(this).parents("tr").hide();
+//            window.location.hash = '';
+//        });
+//           //event.preventDefault();
+//            //$(this).parents("tr").hide();
+//       
+//    });               
+//});
+//
+//$(document).ready(function(){
+//   $("#myTable2Colum tr").each(function (index) {        
+//        $(this).mouseover(function() {
+//                $(this).find(".closeUserInfo").css({"display" : "inline-block","vertical-align" : "middle", "margin-right" : "10px"});
+//           $(this).mouseleave(function() {
+//                $(this).find(".closeUserInfo").css({"display" : "none"})
+//            });
+//        });
+//       var modalDialog = $(this).find('.modalDialog');
+//       $(this).find(".closeUserInfo").click(function(event){
+//            modalDialog.display('block');
+//        });
+//        modalDialog.find('.delItem').click(function(){
+//            $(this).parents("tr").hide();
+//            window.location.hash = '';
+//        });
+//    });               
+//});
+//
+//$(document).ready(function() {
+//    $('.closedMyChat').click(function() {
+//       $('.myChatOpen').css({'display' : 'none'});
+//       $('.myChatClosed1').css({'display' : 'block'});
+//    });
+//    $('.openMyChat').click(function() {
+//       $('.myChatClosed1').css({'display' : 'none'});
+//       $('.myChatOpen').css({'display' : 'block'});
+//    });
+//    $('.myChatOpen10').find('.chatRed').click(function() {
+//       $(this).parents('.myChatOpen10').css({'display' : 'none'});
+//       $('.myChatOpen10Edit').css({'display' : 'block'});
+//    });
+//    $('.myChatOpen10Edit').find('.chatRed').click(function() {
+//       $(this).parents('.myChatOpen10Edit').css({'display' : 'none'});
+//       $('.myChatOpen10').css({'display' : 'block'});
+//    });
+//});
+//
+//jQuery (function ($) { 
+//  $(function() {
+//    function maskPhone() {
+//      var country = $('#gsm_country option:selected').val();
+//      switch (country) {
+//        case "by":
+//          $("#gsmphone").mask("+375(99) 999-99-99");
+//          break;
+//        case "ru":
+//          $("#gsmphone").mask("+7(999) 999-99-99");
+//          break;
+//        case "ua":
+//          $("#gsmphone").mask("+380(999) 999-99-99");
+//          break;
+//        case "kz":
+//          $("#gsmphone").mask("+7(999) 999-99-99");
+//          break;
+//      }    
+//    }
+//    maskPhone();
+//    $('#gsm_country').change(function() {
+//      maskPhone();
+//    });
+//  });
+//});
+//
+//$(document).ready(function() {
+//    $( "#getCode" ).click(function( event ) {
+//      event.preventDefault();
+//    });
+//});
+//
+//$(function() {
+//    $(".anyQuestionRight1").each(function(index){
+//        $(this).children('.anyQuestionRight5').click(function(){
+//            if($(this).hasClass('indexhide') == false){
+//                $(this).addClass('indexhide');
+//                $(this).siblings('.anyQuestionRight4').show('slow');   
+//            }else if($(this).hasClass('indexhide') == true){
+//                $(this).removeClass('indexhide');
+//                $(this).siblings('.anyQuestionRight4').hide('slow');
+//            }
+//        });
+//    });
+//});
+//
+//function changeZIndex() {
+//    $(".link_creatTow5").css("z-index","0");
+//};
+//function rechangeZIndex() {
+//    $(".link_creatTow5").css("z-index","1");
+//};
+//
+//$(document).ready(function(){
+//    $('.castleFight').slick({
+//    dots: false,
+//    infinite: false,
+//    speed: 300,
+//    slidesToShow: 7,
+//    centerMode: false,
+//    variableWidth: true,
+//    arrows: true,
+//    prevArrow: '<button type="button" class="slick-prev"><div class="prevSlick"></div></button>',
+//    nextArrow: '<button type="button" class="slick-next"><div class="nextSlick"></div></button>'
+//    });
+//});
+//
+//$(document).ready(function(){
+//  $("#myTable2Colum").tablesorter();
+//});
 
 
