@@ -320,64 +320,21 @@ var herbColor2 = "#424242";
 
 function herbS(){
        var radio = document.getElementsByName('back');
-       if (radio[0].checked)
-        {
-               herbShape = radio[0].value;
+         for (var i=0; i < radio.length; i++) {
+            if (radio[i].checked===true) {     
+             herbShape = radio[i].value;
         }
-        else if (radio[1].checked)
-        {
-               herbShape = radio[1].value;
-         }
-        else if (radio[2].checked)
-        {
-               herbShape = radio[2].value;
-         }
-         else if (radio[3].checked)
-        {
-               herbShape = radio[3].value;
-         }
-        else if (radio[4].checked)
-        {
-               herbShape = radio[4].value;
-         }
-         else if (radio[5].checked)
-        {
-               herbShape = radio[5].value;
-         }
-         else if (radio[6].checked)
-        {
-               herbShape = radio[6].value;
-         }
-         else if (radio[7].checked)
-        {
-               herbShape = radio[7].value;
-         }
+    }
     drawHerb('herb1');
 }
 
 function grdOne(){
        var radio = document.getElementsByName('division');
-
-       if (radio[0].checked)
-        {
-               herbGrad = radio[0].value;
+        for (var i=0; i < radio.length; i++) {
+            if (radio[i].checked===true) {     
+             herbGrad = radio[i].value;
         }
-        else if (radio[1].checked)
-        {
-               herbGrad = radio[1].value;
-         }
-        else if (radio[2].checked)
-        {
-               herbGrad = radio[2].value;
-         }
-         else if (radio[3].checked)
-        {
-               herbGrad = radio[3].value;
-         }
-        else if (radio[4].checked)
-        {
-               herbGrad = radio[4].value;
-         }
+    }
     drawHerb('herb1');
 }
 
