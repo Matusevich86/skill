@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillPlus.Me</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <script
+          src="https://code.jquery.com/jquery-1.9.1.min.js"
+          integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+          crossorigin="anonymous">
+    </script>
+    <link href="css/magicsuggest-min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zero.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.jscrollpane.css"> 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="js/magicsuggest-min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.jscrollpane.js"></script>
+    <script src="js/jquery.tablesorter.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/scripts.js"></script>
+    
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="SkillPlus.Me"/>
+    <meta property="og:description" content="Опыт - лучший учитель"/>
+    <meta property="og:image" content="http://skillplus.me/image/meta-vyz.png"/>
+    <meta property="og:url" content="http://skillplus.me/"/>
+    <meta property="og:site_name" content="SkillPlus.Me"/>
+</head>
+<body>
+  <div class="header"> 
+      <div class="contW">     
+       <div class="logo">
+           <a href="index.html"><img class="logo-img" src="image/logo.png"></a> 
+       </div>
+       <div class='vyhod'>
+           <a href="#"><img src="image/vyhod.png" alt="Выход"><div>&nbsp;&nbsp;Выход</div></a>
+       </div>
+       <div class="search">
+           <input class="magnifier" type=search>
+       </div>
+       <div class="langRu">
+           <p>Рус</p>
+       </div>
+       <div class="langEng">
+           <p>Eng</p>
+       </div>
+      </div>
+     </div>
+  <div class="contW">     
+   <div class="container">
+       <div class="left-meny">
+           <ul>
+               <li><a class="list-meny1" href="#"><img src="image/avatar.png" alt="аватар"><span class="spm1">Ольга</span></a><span id="icon">Оруженосец</span></li>
+               <li id="lm1"><a class="list-meny1" href="authorization.html"><img src="image/home.png" alt="аватар"><span class="spm1">Вход</span></a><br><a id="regmeny" href="registration.html"><span>Регистрация</span></a></li>
+               <li><a class="list-meny2" href="vyzovy1.html"><span class="spm2">Вызовы</span></a></li>
+               <li><a class="list-meny3" href="podvygi1.html"><span class="spm3">Подвиги</span></a></li>
+               <li><a class="list-meny4" href="#"><span class="spm4">Походы</span></a></li>
+               <li><a class="list-meny5" href="alltournament.html"><span class="spm5">Турниры</span></a></li>
+               <li><a class="list-meny6" href="achievements.html"><span class="spm6">Мой замок</span></a></li>
+               <li><a class="list-meny7" href="#"><span class="spm7">Кодекс рыцаря</span></a></li>
+               <li><a class="list-meny8" href="cancelaria.html"><span class="spm8">Канцелярия</span></a></li>
+           </ul>
+       </div>
+          <div class="contPodvig">
+           <div class="bodyPodvig">
+               <a class="allPodvigHref1NA" href="alltournament.html">Все турниры</a>
+               <a class="viewPodvigHref" href="#">Усастники</a>                     
+                     <div class="tourn_head">
+                         <div class="tourn_headTow">
+                             <div>
+                                 <div><img src="image/min_tourn21.png" alt="Башня" class="tourn_headTow_img1"></div>
+                                 <div><img src="image/myCastle1.png" alt="Башня" class="tourn_headTow_img2"></div>
+                             </div>
+                         </div>
+                         <div class="width100">
+                             <div class="tourn_name_tower">Название турнира (возможно оно будет не очень-то короткое)</div>
+                             <div class="tourn_gdhd">
+                                 <div class="tourn_gdhd1">
+                                     <div class="zach1">Зачинщик: <a href="#" class="linkNew">Елена Локтева</a></div>
+                                     <div class="zach2">Участников: 24</div>
+                                     <div class="zach3">Тип турнира: <a href="#" class="linkNew">Оборона крепости</a></div>
+                                 </div>
+                                 <div class="zach4">
+                                     <a href="#" class="linkNew">Информационные технологии</a>, <a href="#" class="linkNew">Строительство и архитектура</a>, <a href="#" class="linkNew">Маркетинг</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                    
+                <div>
+                   <form action="">
+                    <input type="submit" class="saveVyzBut15" value="Заявки (6)">
+                    <input type="submit" class="saveVyzBut16" value="Участники (6)">
+                   </form>
+                </div>
+                    
+                <div class="statisticTable">
+                    <table id="myTable2Colum" class="tablesorter">
+                        <thead>
+                         <tr>
+                            <th>A - Z</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="#" class="linkNew">ALogin</a><span><canvas class="tableCanvas" width="130px" height="130px" id="herb7">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb7');
+                              </script></span>
+                            </td>
+                            <td>
+                               <div class="SecondColCont">
+                                   <div class="SecondColT1">
+                                    <div class="teaser">Здесь будет размещаться сердечный текст, (или промо-код), почему этому пользователю жизненно необходимо</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM33 id=POEM5 value=1>
+                                    <label for=POEM5>весь текст</label>
+                                    <div class="complete"> принять участие в этом турнире. Изначально видно две строки, которые при клике на “весь текст” развворачиваются польностью (см. ниже)</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM33 id=POEM6 checked value=2>
+                                    <label for=POEM6>скрыть</label>
+                                </div>
+                                <div class="SecondColT2">
+                                    <a href="#">
+                                        <div class="btn-st2-1">Принять</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn-st2-2">Отклонить</div>
+                                    </a>
+                                </div>
+                               </div>
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="linkNew">BLogin</a><span><canvas class="tableCanvas" width="130px" height="130px" id="herb2">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb2');
+                              </script></span>
+                            </td>
+                            <td>
+                               <div class="SecondColCont">
+                                   <div class="SecondColT1">
+                                    <div class="teaser">Здесь будет размещаться сердечный текст, (или промо-код), почему этому пользователю жизненно необходимо</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM34 id=POEM1 value=1>
+                                    <label for=POEM1>весь текст</label>
+                                    <div class="complete"> принять участие в этом турнире. Изначально видно две строки, которые при клике на “весь текст” развворачиваются польностью (см. ниже)</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM34 id=POEM2 checked value=2>
+                                    <label for=POEM2>скрыть</label>
+                                </div>
+                                <div class="SecondColT2">
+                                    <a href="#">
+                                        <div class="btn-st2-1">Принять</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn-st2-2">Отклонить</div>
+                                    </a>
+                                </div>
+                               </div>
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="linkNew">Мой личный логин защитника</a><span><canvas class="tableCanvas" width="130px" height="130px" id="herb3">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb3');
+                              </script></span>
+                            </td>
+                            <td>
+                               <div class="SecondColCont">
+                                   <div class="SecondColT1">
+                                    <div class="teaser">Здесь будет размещаться сердечный текст, (или промо-код), почему этому пользователю жизненно необходимо</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM35 id=POEM3 value=1>
+                                    <label for=POEM3>весь текст</label>
+                                    <div class="complete"> принять участие в этом турнире. Изначально видно две строки, которые при клике на “весь текст” развворачиваются польностью (см. ниже)</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM35 id=POEM4 checked value=2>
+                                    <label for=POEM4>скрыть</label>
+                                </div>
+                                <div class="SecondColT2">
+                                    <a href="#">
+                                        <div class="btn-st2-1">Принять</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn-st2-2">Отклонить</div>
+                                    </a>
+                                </div>
+                               </div>
+                            </td>
+                            
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="linkNew">DLogin</a><span><canvas class="tableCanvas" width="130px" height="130px" id="herb4">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb4');
+                              </script></span>
+                            </td>
+                            <td>
+                               <div class="SecondColCont">
+                                   <div class="SecondColT1">
+                                    <div class="teaser">Здесь будет размещаться сердечный текст, (или промо-код), почему этому пользователю жизненно необходимо</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM36 id=POEM7 value=1>
+                                    <label for=POEM7>весь текст</label>
+                                    <div class="complete"> принять участие в этом турнире. Изначально видно две строки, которые при клике на “весь текст” развворачиваются польностью (см. ниже)</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM36 id=POEM8 checked value=2>
+                                    <label for=POEM8>скрыть</label>
+                                </div>
+                                <div class="SecondColT2">
+                                    <a href="#">
+                                        <div class="btn-st2-1">Принять</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn-st2-2">Отклонить</div>
+                                    </a>
+                                </div>
+                               </div> 
+                            </td>
+                            
+                              
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="linkNew">ELogin</a><span><canvas class="tableCanvas" width="130px" height="130px" id="herb5">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb5');
+                              </script></span>
+                            </td>
+                            <td>
+                               <div class="SecondColCont">
+                                   <div class="SecondColT1">
+                                    <div class="teaser">Здесь будет размещаться сердечный текст, (или промо-код), почему этому пользователю жизненно необходимо</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM37 id=POEM9 value=1>
+                                    <label for=POEM9>весь текст</label>
+                                    <div class="complete"> принять участие в этом турнире. Изначально видно две строки, которые при клике на “весь текст” развворачиваются польностью (см. ниже)</div>
+                                    <input type=radio class='SReadMoreRadio' name=POEM37 id=POEM10 checked value=2>
+                                    <label for=POEM10>скрыть</label>
+                                </div>
+                                <div class="SecondColT2">
+                                    <a href="#">
+                                        <div class="btn-st2-1">Принять</div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="btn-st2-2">Отклонить</div>
+                                    </a>
+                                </div>
+                               </div>
+                            </td>
+                           
+                          </tr>
+                          <tr>
+                            <td><a href="#" class="linkNew">FLogin</a><span><canvas class="tableCanvas" width="130px" height="130px" id="herb6">Обновите ваш браузер</canvas>
+                              <script>
+                                  var herbShape = "3";
+                                  var herbGrad = "3";
+                                  var herbColor1 = "#e4e4e4"; 
+                                  var herbColor2 = "#424242";
+                                  drawHerb('herb6');
+                              </script></span>
+                            </td>
+                            <td>
+                              <div class="SecondColCont">
+                                   <div>78 баллов</div>
+                               </div>
+                          </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                     
+                    <div class="radio-toolbar-two">
+                        <input type="radio" id="radio4" name="radios-two" value="1" checked>
+                        <label for="radio4">&nbsp;1 &mdash; 20</label>
+
+                        <input type="radio" id="radio5" name="radios-two"value="2">
+                        <label for="radio5">21 &mdash; 40</label>
+
+                        <input type="radio" id="radio6" name="radios-two" value="3">
+                        <label for="radio6">41 &mdash; 60</label>
+                    </div>
+                    <div class="mt15">
+                        <input type="submit" class="saveVyzBut15" value="Вернуться к турниру">
+                    </div>
+                     
+               </div>            
+          </div>
+          <div class="footUp">
+             <p><span id="footUpText">Расскажи друзьям: &nbsp;</span></p>
+                 <script type="text/javascript">(function() {
+                  if (window.pluso)if (typeof window.pluso.start == "function") return;
+                  if (window.ifpluso==undefined) { window.ifpluso = 1;
+                    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                    var h=d[g]('body')[0];
+                    h.appendChild(s);
+                  }})();
+                </script>
+                <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,linkedin"></div>
+         </div>
+       </div>   
+   </div>
+   <div class="footer">     
+         <div class="footDown">
+             <div class="footDown1">
+                 <div class="footDown1_1">
+                     <p><a href="#">Политика конфеденциальности</a></p>
+                     <p><a href="#">Пользовательское соглашение</a></p>
+                 </div>
+                 <div class="footDown1_2">
+                     <p>admin@skillplus.me</p>
+                     <p><a href="cancelaria.html">Канцелярия</a></p>
+                 </div>
+                 <div class="footDown1_3">
+                     <p>&copy; 2018 SkillPlus.Me</p>
+                 </div>
+             </div>
+         </div>
+     </div>
+    
+</body>
+</html>

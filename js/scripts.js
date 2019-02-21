@@ -586,7 +586,6 @@ function drawHerb(canvasId){
   ctx.stroke();              
 }
 
-
 $(document).ready(function(){
     $("#showHideContent").click(function () {
         if ($("#content").is(":hidden")) {
@@ -699,7 +698,7 @@ $(document).ready(function(){
     dots: false,
     infinite: false,
     speed: 300,
-    slidesToShow: 10,
+    slidesToShow: 16,
     centerMode: false,
     variableWidth: true,
     arrows: true,
@@ -732,6 +731,25 @@ $(document).ready(function(){
            //event.preventDefault();
             //$(this).parents("tr").hide();
        
+    });               
+});
+
+$(document).ready(function(){
+   $("#myTable2Colum tr").each(function (index) {        
+        $(this).mouseover(function() {
+                $(this).find(".closeUserInfo").css({"display" : "inline-block","vertical-align" : "middle", "margin-right" : "10px"});
+           $(this).mouseleave(function() {
+                $(this).find(".closeUserInfo").css({"display" : "none"})
+            });
+        });
+       var modalDialog = $(this).find('.modalDialog');
+       $(this).find(".closeUserInfo").click(function(event){
+            modalDialog.display('block');
+        });
+        modalDialog.find('.delItem').click(function(){
+            $(this).parents("tr").hide();
+            window.location.hash = '';
+        });
     });               
 });
 
@@ -799,3 +817,30 @@ $(function() {
         });
     });
 });
+
+function changeZIndex() {
+    $(".link_creatTow5").css("z-index","0");
+};
+function rechangeZIndex() {
+    $(".link_creatTow5").css("z-index","1");
+};
+
+$(document).ready(function(){
+    $('.castleFight').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 7,
+    centerMode: false,
+    variableWidth: true,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><div class="prevSlick"></div></button>',
+    nextArrow: '<button type="button" class="slick-next"><div class="nextSlick"></div></button>'
+    });
+});
+
+$(document).ready(function(){
+  $("#myTable2Colum").tablesorter();
+});
+
+
